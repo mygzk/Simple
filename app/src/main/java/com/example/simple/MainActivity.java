@@ -1,28 +1,139 @@
 package com.example.simple;
 
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.gson.reflect.TypeToken;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
-    private String str= "{\"caseImg\":\"http:\\/\\/220.249.20.134:2828\\/fileupload\\/2017010411002370211.jpg\",\"userId\":46}";
+
+    private ListView lsView;
+    List<MyBean> mDatas;
+    MyAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
+        initView();
+
+    }
+
+    private void initView() {
+        lsView = (ListView) findViewById(R.id.testlist);
+        initDatas();
+        adapter = new MyAdapter(this, mDatas);
+        lsView.setAdapter(adapter);
+        lsView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                Bean bean =GsonUtils.fromJson(str,new TypeToken<Bean>(){});
-                Log.e("test","url:"+bean.getCaseImg());
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                MyBean bean = mDatas.get(position);
+                Intent i = new Intent(MainActivity.this, bean.getaClass());
+                MainActivity.this.startActivity(i);
             }
         });
 
+    }
+
+    private void initDatas() {
+        mDatas = new ArrayList<>();
+        mDatas.add(new MyBean("WheelActivity", WheelActivity.class));
+
+    }
+
+    class MyAdapter extends BaseAdapter {
+        Context context;
+        List<MyBean> datas;
+
+        public MyAdapter(Context context, List<MyBean> datas) {
+            this.context = context;
+            this.datas = datas;
+        }
+
+        @Override
+        public int getCount() {
+            return datas.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return datas.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            HolderView holderView = null;
+            if (convertView == null) {
+                holderView = new HolderView();
+                TextView tv = new TextView(context);
+                tv.setGravity(Gravity.CENTER);
+                int itemHeight = (int) (context.getResources().getDisplayMetrics().density * 46);
+                AbsListView.LayoutParams lp =
+                        new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, itemHeight);
+                tv.setLayoutParams(lp);
+                holderView.tvClass = tv;
+                convertView = tv;
+                convertView.setTag(holderView);
+
+            } else {
+                holderView = (HolderView) convertView.getTag();
+            }
+
+            holderView.tvClass.setText(datas.get(position).getDecript() + "");
+            return convertView;
+        }
+    }
+
+    class MyBean {
+        private String decript;
+        private Class aClass;
+
+        public MyBean(String decript, Class aClass) {
+            this.decript = decript;
+            this.aClass = aClass;
+        }
+
+        public String getDecript() {
+            return decript;
+        }
+
+        public void setDecript(String decript) {
+            this.decript = decript;
+        }
+
+        public Class getaClass() {
+            return aClass;
+        }
+
+        public void setaClass(Class aClass) {
+            this.aClass = aClass;
+        }
+    }
+
+    class HolderView {
+        TextView tvClass;
 
     }
 }

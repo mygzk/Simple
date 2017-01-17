@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private void initDatas() {
         mDatas = new ArrayList<>();
         mDatas.add(new MyBean("WheelActivity", WheelActivity.class));
+        mDatas.add(new MyBean("LinkActivity", LinkActivity.class));
 
     }
 

@@ -1,4 +1,4 @@
-package com.example.simple;
+package com.example.simple.bean;
 
 /**
  * Created by guozhk on 17-1-6.

@@ -1,10 +1,12 @@
-package com.example.simple;
+package com.example.simple.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.ListMenuItemView;
 import android.util.Log;
 import android.view.View;
+
+import com.example.simple.R;
 
 import java.util.ArrayList;
 import java.util.List;

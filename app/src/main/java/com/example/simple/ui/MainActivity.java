@@ -1,12 +1,9 @@
-package com.example.simple;
+package com.example.simple.ui;
 
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.gson.reflect.TypeToken;
+import com.example.simple.R;
 
 import java.util.ArrayList;
 import java.util.List;

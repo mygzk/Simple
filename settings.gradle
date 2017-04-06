@@ -1,4 +1,4 @@
-include ':app', ':groovy'
+include ':app', ':groovy', ':myfirstlibs'
 include ':library:Common'
 include ':library:WheelPicker'
 

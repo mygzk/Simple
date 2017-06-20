@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion 25
@@ -28,4 +30,97 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
+}
+
+//ext {
+//    bintrayRepo = 'MyFirst'
+//    bintrayName = 'myfirstlibs'
+//
+//    publishedGroupId = 'com.example.myfirstlibs'
+//    libraryName = 'myfirstlibs'
+//    artifact = 'myfirstlibs'
+//    libraryVersion = '1.0.0'
+//
+//    libraryDescription = 'a circle loading for android'
+//
+//    siteUrl = 'https://github.com/mygzk/Simple.git'
+//    gitUrl = 'https://github.com/mygzk/Simple.git'
+//
+//
+//
+//    developerId = 'mrzk'
+//    developerName = 'zhangke'
+//    developerEmail = '609975727@qq.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
+version = "1.0.0" // 版本号
+
+def siteUrl ='https://github.com/mygzk/Simple.git'    // Git项目主页
+def gitUrl = 'https://github.com/mygzk/Simple.git' // Git仓库url
+group = "com.example.myfirstlibs" // 一般为包名
+
+install {
+    repositories.mavenInstaller {
+        // 生成POM.xml
+        pom {
+            project {
+                packaging 'aar'
+                name 'Android test' // 项目描述
+                url siteUrl
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer { // 开发者个人信息
+                        id 'guozhk'
+                        name 'guozhk'
+                        email 'guozhk0902@gmail.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+task javadoc(type: Javadoc) {
+    options.encoding = "UTF-8" // 设置编码，否则中文可能会提示出错
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    configurations = ['archives']
+    pkg {
+        repo = "MyFirst" // 发布到Maven库
+        name = "myfirstlibs" // 发布到JCenter上的项目名字
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
 }

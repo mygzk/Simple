@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.simple.ui.XuanfuActivity">
+
+</android.support.constraint.ConstraintLayout>
+-->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="268dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:contentScrim="#00000000"
+            app:layout_scrollFlags="scroll">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+           </LinearLayout>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#a9acaf"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:text="更多"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:gravity="center"
+                android:text="其他"
+                android:textColor="#fff" />
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="#123"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="阿斯顿发顺丰是范德萨范德萨发"
+                android:textColor="#fff" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

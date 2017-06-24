@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         mDatas = new ArrayList<>();
         mDatas.add(new MyBean("WheelActivity", WheelActivity.class));
         mDatas.add(new MyBean("LinkActivity", LinkActivity.class));
+        mDatas.add(new MyBean("XuanfuActivity", XuanfuActivity.class));
 
     }
 

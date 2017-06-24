@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.WheelActivity" />
-        <activity android:name=".ui.LinkActivity"></activity>
+        <activity android:name=".ui.LinkActivity" />
+        <activity android:name=".ui.XuanfuActivity"></activity>
     </application>
 
 </manifest>

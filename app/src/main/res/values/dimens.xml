@@ -2,4 +2,40 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="padd10">5dp</dimen>
+    <dimen name="front_seize11">11sp</dimen>
+    <dimen name="front_seize12">12sp</dimen>
+    <dimen name="front_seize13">13sp</dimen>
+    <dimen name="front_seize14">14sp</dimen>
+    <dimen name="front_seize15">15sp</dimen>
+    <dimen name="front_seize16">16sp</dimen>
+    <dimen name="front_seize17">17sp</dimen>
+    <dimen name="front_seize18">18sp</dimen>
+    <dimen name="front_seize20">20sp</dimen>
+    <dimen name="comm_height">48dp</dimen>
+    <dimen name="comm_height48">48dp</dimen>
+    <dimen name="comm_height46">46dp</dimen>
+    <dimen name="comm_height75">75dp</dimen>
+    <dimen name="comm_width80">80dp</dimen>
+    <dimen name="comm_width52">52dp</dimen>
+    <dimen name="comm_width56">56dp</dimen>
+    <dimen name="comm_width120">120dp</dimen>
+    <dimen name="height05">0.5dp</dimen>
+
+    <!--tag-->
+    <dimen name="tag_corner_radius">20dip</dimen>
+    <dimen name="common_margin_10">10dip</dimen>
+
+    <dimen name="from_item_marginleft">10dip</dimen>
+
+    <!--go_activity-->
+    <!--底部线路列表左侧图片-->
+    <integer name="screen_duration">250</integer>
+
+    <dimen name="title_size18">18sp</dimen>
+    <dimen name="title_size15">15sp</dimen>
+    <dimen name="custom_form_item_title_width">94dp</dimen>
+
+
 </resources>

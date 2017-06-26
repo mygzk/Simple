@@ -31,7 +31,7 @@ public class ModifyStatusStytleActivity extends Activity implements View.OnClick
                 StatusBarUtil.transparencyBar(this);
                 break;
             case R.id.btn_test2:
-                StatusBarUtil.setStatusBarColor(this,R.color.status_color1);
+                StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);
                 break;
             case R.id.btn_test3:
                 StatusBarUtil.StatusBarLightMode(this);

@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         mDatas.add(new MyBean("LinkActivity", LinkActivity.class));
         mDatas.add(new MyBean("XuanfuActivity", XuanfuActivity.class));
         mDatas.add(new MyBean("ModifyStatusStytleActivity", ModifyStatusStytleActivity.class));
+        mDatas.add(new MyBean("CheckPremissActivity", CheckPremissActivity.class));
 
     }
 

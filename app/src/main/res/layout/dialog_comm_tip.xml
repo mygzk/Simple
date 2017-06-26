@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_square_white_corners"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_comm_tip_title"
+        style="@style/comm_dialog_title_style"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/dialog_comm_tip_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:gravity="center_vertical|left"
+        android:minHeight="46dp"
+        android:paddingLeft="5dp"
+        android:textColor="@color/front_4"
+        android:scrollbars="vertical"
+        android:maxLines="10"
+        android:textSize="@dimen/front_seize16" />
+
+    <include
+        layout="@layout/comm_buttom_btn"
+        android:layout_width="match_parent"
+        android:layout_height="46dp" />
+
+</LinearLayout>

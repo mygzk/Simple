@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <!--    <color name="colorPrimary">#303135</color>
+        <color name="colorPrimaryDark">#303135</color>-->
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="status_color1">#01FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="front_1">#333333</color>
+    <color name="front_2">#666666</color>
+    <color name="front_4">#222222</color>
+    <color name="front_3">#999999</color>
+    <color name="front_5">#29baff</color>
+    <color name="front_6">#1e81d2</color>
+    <color name="front_7">#ffb73a</color>
+    <!--line颜色-->
+    <color name="line_0">#bf999898</color>
+    <color name="line_1">#d7d7d7</color>
+    <color name="line_2">#bfd4d1d1</color>
+    <color name="line_login">#dcdcdc</color>
+    <color name="line_divider_gray">#d7d7d7</color>
+
+    <color name="main_background">#FF3B3C3D</color>
+    <color name="radio_textcolor_focus">#5288c4</color>
+
+    <color name="clear">#00000000</color>
+    <color name="blue_circle">#1e81d2</color>
+
+    <color name="main_bg">#eeeeee</color>
+    <color name="comm_title">#ffffff</color>
+
+    <color name="cursor">#999999</color>
+
+    <color name="fill_color">#dfdfdf</color>
+    <color name="blue_font">#007bff</color>
+    <color name="text_blue_color">#007aff</color>
+
+    <color name="form_font_corlor1">#666666</color>
+    <color name="form_font_corlor2">#ee3636</color>
+    <color name="form_font_corlor3">#999999</color>
+    <!--输入框边线颜色-->
+    <color name="input_line_bg">#c0c0c0</color>
 </resources>

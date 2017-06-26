@@ -16,4 +16,23 @@
         <item name="android:textSelectHandle">@mipmap/ic_launcher</item>
     </style >
 
+
+    <!--dialog tv title通用样式-->
+    <style name="comm_dialog_title_style">
+        <item name="android:gravity">center</item>
+        <item name="android:height">@dimen/comm_height46</item>
+        <item name="android:textColor">@color/front_4</item>
+        <item name="android:textSize">@dimen/front_seize16</item>
+    </style>
+
+    <!--button通用样式-->
+    <style name="comm_btn_style">
+        <item name="android:gravity">center</item>
+        <item name="android:height">@dimen/comm_height</item>
+        <item name="android:textColor">@color/front_4</item>
+        <item name="android:textSize">@dimen/front_seize16</item>
+        <item name="android:background">@color/front_3</item>
+    </style>
+
+
 </resources>

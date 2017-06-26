@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".ui.WheelActivity" />
         <activity android:name=".ui.LinkActivity" />
-        <activity android:name=".ui.XuanfuActivity"></activity>
+        <activity android:name=".ui.XuanfuActivity" />
+        <activity android:name=".ui.ModifyStatusStytleActivity"></activity>
     </application>
 
 </manifest>

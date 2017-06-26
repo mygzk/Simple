@@ -19,6 +19,11 @@
         android:layout_width="match_parent"
         android:layout_height="268dp">
 
+       <!-- <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:contentScrim="#00000000"
+            app:layout_scrollFlags="scroll">-->
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="220dp"

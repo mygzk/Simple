@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.simple.ui.DrawActivity">
+
+    <TextView
+        android:id="@+id/draw_circle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#565a5e"
+        android:layout_margin="5dp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:text="draw_circle"/>
+
+    <TextView
+        android:id="@+id/draw_duihao"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#565a5e"
+        android:layout_margin="5dp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:text="对号"/>
+    
+    <com.example.simple.widget.CircleProgressView
+        android:id="@+id/progress_circle"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"/>
+
+
+</LinearLayout>

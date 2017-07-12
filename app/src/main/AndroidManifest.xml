@@ -40,7 +40,8 @@
         <activity android:name=".ui.ModifyStatusStytleActivity" />
         <activity android:name=".ui.PhoneConnectsActivity" />
         <activity android:name=".ui.CheckPremissActivity" />
-        <activity android:name=".ui.DrawActivity"></activity>
+        <activity android:name=".ui.DrawActivity" />
+        <activity android:name=".ui.DispatchTouchTestActivity"></activity>
     </application>
 
 </manifest>

@@ -14,12 +14,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.simple.R;
+import com.example.simple.widget.MyFragLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    private String TAG = MainActivity.class.getSimpleName();
     private ListView lsView;
     List<MyBean> mDatas;
     MyAdapter adapter;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         mDatas.add(new MyBean("PremissionTestActivity", PremissionTestActivity.class));
         mDatas.add(new MyBean("DialogActivity", DialogActivity.class));
         mDatas.add(new MyBean("DrawActivity", DrawActivity.class));
+        mDatas.add(new MyBean("DispatchTouchTestActivity", DispatchTouchTestActivity.class));
 
     }
 

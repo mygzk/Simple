@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.simple.ui.PremissionTestActivity">
+
+    <TextView
+        android:id="@+id/btn_test1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:background="#123"
+        android:gravity="center"
+        android:text="test1"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/btn_test2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:background="#123"
+        android:gravity="center"
+        android:text="test2"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/btn_test3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:background="#123"
+        android:gravity="center"
+        android:text="test3"
+        android:textColor="#fff" />
+
+</LinearLayout>

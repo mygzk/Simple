@@ -2,8 +2,10 @@ package com.example.simple.ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import com.example.simple.widget.MyFragLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.jar.Manifest;
 
 public class MainActivity extends AppCompatActivity {
     private String TAG = MainActivity.class.getSimpleName();
@@ -29,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Log.e(TAG,"====onCreate=====");
         initView();
 
     }
@@ -141,5 +144,42 @@ public class MainActivity extends AppCompatActivity {
     class HolderView {
         TextView tvClass;
 
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e(TAG,"====onPause=====");
+    }
+
+    @Override
+    protected void onStop() {
+        Log.e(TAG,"====onStop=====");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.e(TAG,"====onDestroy=====");
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        Log.e(TAG,"====onRestoreInstanceState=====");
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        Log.e(TAG,"====onSaveInstanceState 000=====");
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        Log.e(TAG,"====onSaveInstanceState 1111=====");
+        super.onSaveInstanceState(outState, outPersistentState);
     }
 }

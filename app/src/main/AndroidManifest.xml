@@ -41,7 +41,8 @@
         <activity android:name=".ui.PhoneConnectsActivity" />
         <activity android:name=".ui.CheckPremissActivity" />
         <activity android:name=".ui.DrawActivity" />
-        <activity android:name=".ui.DispatchTouchTestActivity"></activity>
+        <activity android:name=".ui.DispatchTouchTestActivity" />
+        <activity android:name=".ui.ImgTestActivity"></activity>
     </application>
 
 </manifest>

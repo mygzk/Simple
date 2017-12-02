@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         mDatas.add(new MyBean("DialogActivity", DialogActivity.class));
         mDatas.add(new MyBean("DrawActivity", DrawActivity.class));
         mDatas.add(new MyBean("DispatchTouchTestActivity", DispatchTouchTestActivity.class));
+        mDatas.add(new MyBean("ImgTestActivity", ImgTestActivity.class));
 
     }
 

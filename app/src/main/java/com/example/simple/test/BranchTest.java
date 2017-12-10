@@ -12,4 +12,7 @@ public class BranchTest {
     public String toString() {
         return super.toString();
     }
+
+    private String s;
+    private long l;
 }

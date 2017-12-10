@@ -5,4 +5,6 @@ package com.example.simple.test;
  */
 
 public class BranchTest {
+
+    private  int i=0;
 }

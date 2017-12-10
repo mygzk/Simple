@@ -9,4 +9,5 @@ import com.example.simple.utils.StringCheckUtil;
 public class BranchTest {
 
     private String s;
+    private long l;
 }

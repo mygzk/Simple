@@ -10,4 +10,6 @@ public class BranchTest {
 
     private String s;
     private long l;
+
+    private boolean b;
 }

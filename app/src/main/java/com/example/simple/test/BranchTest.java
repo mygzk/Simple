@@ -7,4 +7,9 @@ package com.example.simple.test;
 public class BranchTest {
 
     private  int i=0;
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

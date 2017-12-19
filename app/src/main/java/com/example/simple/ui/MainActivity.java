@@ -16,28 +16,30 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.simple.R;
+import com.example.simple.evenBean.TestMessEven;
 import com.example.simple.widget.MyFragLayout;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.jar.Manifest;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private String TAG = MainActivity.class.getSimpleName();
     private ListView lsView;
     List<MyBean> mDatas;
     MyAdapter adapter;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.e(TAG,"====onCreate=====");
-        initView();
 
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
     }
 
-    private void initView() {
+    @Override
+    protected void initView() {
         lsView = (ListView) findViewById(R.id.testlist);
         initDatas();
         adapter = new MyAdapter(this, mDatas);
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         mDatas.add(new MyBean("DrawActivity", DrawActivity.class));
         mDatas.add(new MyBean("DispatchTouchTestActivity", DispatchTouchTestActivity.class));
         mDatas.add(new MyBean("ImgTestActivity", ImgTestActivity.class));
+        mDatas.add(new MyBean("EvenBusTestActivity", EvenBusTestActivity.class));
 
     }
 
@@ -151,36 +154,37 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.e(TAG,"====onPause=====");
+        Log.e(TAG, "====onPause=====");
     }
 
     @Override
     protected void onStop() {
-        Log.e(TAG,"====onStop=====");
+        Log.e(TAG, "====onStop=====");
         super.onStop();
     }
 
     @Override
     protected void onDestroy() {
-        Log.e(TAG,"====onDestroy=====");
+        Log.e(TAG, "====onDestroy=====");
         super.onDestroy();
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        Log.e(TAG,"====onRestoreInstanceState=====");
+        Log.e(TAG, "====onRestoreInstanceState=====");
         super.onRestoreInstanceState(savedInstanceState);
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        Log.e(TAG,"====onSaveInstanceState 000=====");
+        Log.e(TAG, "====onSaveInstanceState 000=====");
         super.onSaveInstanceState(outState);
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        Log.e(TAG,"====onSaveInstanceState 1111=====");
+        Log.e(TAG, "====onSaveInstanceState 1111=====");
         super.onSaveInstanceState(outState, outPersistentState);
     }
+
 }

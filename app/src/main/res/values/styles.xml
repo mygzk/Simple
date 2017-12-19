@@ -11,10 +11,10 @@
         <item name="android:editTextStyle">@style/EditTextStyle</item>
     </style>
 
-    <style  name="EditTextStyle" parent="android:Widget.EditText">
+    <style name="EditTextStyle" parent="android:Widget.EditText">
         <item name="android:textCursorDrawable">@mipmap/ic_launcher</item>
         <item name="android:textSelectHandle">@mipmap/ic_launcher</item>
-    </style >
+    </style>
 
 
     <!--dialog tv title通用样式-->
@@ -33,6 +33,7 @@
         <item name="android:textSize">@dimen/front_seize16</item>
         <item name="android:background">@color/front_3</item>
     </style>
+
     <style name="Transparent" parent="Theme.AppCompat.Dialog">
         <item name="android:windowNoTitle">false</item>
         <item name="android:windowFullscreen">true</item>
@@ -53,6 +54,19 @@
         <!--背景是否模糊显示-->
         <item name="android:backgroundDimEnabled">true</item>
 
+
+    </style>
+
+    <style name="comm_tv_style">
+        <item name="android:background">#123</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
 
     </style>
 

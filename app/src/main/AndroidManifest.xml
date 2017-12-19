@@ -22,11 +22,11 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".MyApp"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.MainActivity">
             <intent-filter>
@@ -43,7 +43,8 @@
         <activity android:name=".ui.CheckPremissActivity" />
         <activity android:name=".ui.DrawActivity" />
         <activity android:name=".ui.DispatchTouchTestActivity" />
-        <activity android:name=".ui.ImgTestActivity"></activity>
+        <activity android:name=".ui.ImgTestActivity" />
+        <activity android:name=".ui.EvenBusTestActivity"></activity>
     </application>
 
 </manifest>

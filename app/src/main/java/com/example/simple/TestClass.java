@@ -23,6 +23,7 @@ import static android.R.attr.path;
  * Created by guozhk on 17-1-11.
  */
 
+
 public class TestClass {
     public static void main(String[] agrs){
         A a = new B();

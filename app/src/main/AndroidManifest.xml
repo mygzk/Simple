@@ -46,7 +46,11 @@
         <activity android:name=".ui.DispatchTouchTestActivity" />
         <activity android:name=".ui.ImgTestActivity" />
         <activity android:name=".ui.EvenBusTestActivity" />
-        <activity android:name=".ui.PressDemoActivity"></activity>
+        <activity android:name=".ui.PressDemoActivity" />
+        <activity
+            android:name=".ui.QuestbankActivity"
+            android:label="@string/title_activity_questbank"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

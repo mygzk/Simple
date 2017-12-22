@@ -68,6 +68,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("DispatchTouchTestActivity", DispatchTouchTestActivity.class));
         mDatas.add(new MyBean("ImgTestActivity", ImgTestActivity.class));
         mDatas.add(new MyBean("EvenBusTestActivity", EvenBusTestActivity.class));
+        mDatas.add(new MyBean("PressDemoActivity", PressDemoActivity.class));
 
     }
 

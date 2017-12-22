@@ -45,7 +45,8 @@
         <activity android:name=".ui.DialogActivity" />
         <activity android:name=".ui.DispatchTouchTestActivity" />
         <activity android:name=".ui.ImgTestActivity" />
-        <activity android:name=".ui.EvenBusTestActivity"></activity>
+        <activity android:name=".ui.EvenBusTestActivity" />
+        <activity android:name=".ui.PressDemoActivity"></activity>
     </application>
 
 </manifest>

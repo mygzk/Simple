@@ -183,10 +183,10 @@ public class MainActivity extends BaseActivity {
         super.onSaveInstanceState(outState);
     }
 
-    @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        Log.e(TAG, "====onSaveInstanceState 1111=====");
-        super.onSaveInstanceState(outState, outPersistentState);
-    }
+//    @Override
+//    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+//        Log.e(TAG, "====onSaveInstanceState 1111=====");
+//        super.onSaveInstanceState(outState, outPersistentState);
+//    }
 
 }

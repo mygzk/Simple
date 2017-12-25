@@ -35,6 +35,8 @@ public class QuestbankActivity extends BaseActivity {
         rvTk.setLayoutManager(manager);
         mAdapter = new QuestAdapter(mData);
         rvTk.setAdapter(mAdapter);
+
+
     }
 
     @Override

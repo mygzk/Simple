@@ -42,8 +42,8 @@ public class TopicLayout extends LinearLayout {
     private OnResultCallback onResultCallback;
 
     //已选中的选项
-    private List<Integer> selected = new ArrayList<>();
-   // Map<Integer, Boolean> selectedMap = new HashMap<>();
+//    private List<Integer> selected = new ArrayList<>();
+    Map<Integer, Boolean> selectedMap = new HashMap<>();
     //选项内容
     private List<String> mOptionData;
     //题目
@@ -71,8 +71,8 @@ public class TopicLayout extends LinearLayout {
         initView();
     }
 
-    public TopicLayout setSelected(List<Integer> sel) {
-        this.selected = sel;
+    public TopicLayout setSelected(Map<Integer, Boolean> sel) {
+        this.selectedMap = sel;
         return this;
     }
 
@@ -131,12 +131,18 @@ public class TopicLayout extends LinearLayout {
         }
 
         //初始化选中答案
-        if (this.selected != null && selected.size() > 0) {
+        if (this.selectedMap != null && selectedMap.size() > 0) {
             if (type == TOPIC_TY_ONLY) {
-                radioButtonList.get(selected.get(0)).setChecked(true);
+                for (int s : selectedMap.keySet()) {
+                    boolean seleced = selectedMap.get(s);
+                    if (seleced) {
+                        selectOption(s, seleced);
+                        break;
+                    }
+                }
             } else {
-                for (int s : selected) {
-                    checkBoxArrayList.get(s).setChecked(true);
+                for (int s : selectedMap.keySet()) {
+                    checkBoxArrayList.get(s).setChecked(selectedMap.get(s));
                 }
             }
         }
@@ -154,14 +160,27 @@ public class TopicLayout extends LinearLayout {
                 if (isChecked) {
                     if (pos != i) {
                         radioButtonList.get(i).setChecked(!isChecked);
+                       // updateResult(i, !isChecked);
+                    } else {
+                        radioButtonList.get(i).setChecked(isChecked);
+                        //updateResult(i, isChecked);
                     }
                 }
             }
+        } else {
+            //记录结果
+            //updateResult(pos, isChecked);
         }
+
         //选中时候才会回调
         if (onResultCallback != null && isChecked) {
             onResultCallback.selectCallback(pos);
         }
+    }
+
+    private void updateResult(int pos, boolean isChecked) {
+        selectedMap.put(pos, isChecked);
+
     }
 
 

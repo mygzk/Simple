@@ -12,7 +12,9 @@ import com.example.simple.bean.QuestionBean;
 import com.example.simple.widget.TopicLayout;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by guozhk
@@ -36,15 +38,15 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(QuestAdapter.ViewHolder holder, int position) {
         // holder.tvName.setText("");
-        List<Integer> integers = new ArrayList<>();
+        Map<Integer,Boolean> integers = new HashMap<>();
         if (position % 2 == 0) {
             integers.clear();
-            integers.add(0);
+            integers.put(0,true);
             holder.topicLayout.setSelected(integers).setData("ceshi",null,TopicLayout.TOPIC_TY_ONLY);
         } else {
             integers.clear();
-            integers.add(3);
-            integers.add(1);
+            integers.put(3,true);
+            integers.put(1,true);
             holder.topicLayout.setSelected(integers).setData("ceshi",null,TopicLayout.TOPIC_TY_MORE);
         }
 
@@ -74,6 +76,8 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder> 
                 @Override
                 public void selectCallback(int pos) {
                     Log.e("checked","pos:"+pos);
+
+
                 }
             });
         }

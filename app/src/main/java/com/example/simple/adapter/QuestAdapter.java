@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.simple.R;
@@ -21,7 +22,12 @@ import java.util.Map;
  * create time on 2017/12/22.
  */
 
-public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder> {
+public class QuestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+    private final static int ITEM_TYPE_0 = 0;
+    private final static int ITEM_TYPE_1 = 1;
+
+
     private List<QuestionBean> mData;
 
     public QuestAdapter(List<QuestionBean> mData) {
@@ -29,28 +35,38 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder> 
     }
 
     @Override
-    public QuestAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.quest_item, parent, false);
-        ViewHolder vh = new ViewHolder(view);
-        return vh;
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        if (viewType == ITEM_TYPE_1) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.quest_item, parent, false);
+            ViewHolder vh = new ViewHolder(view);
+            return vh;
+        } else {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.quest_item_img, parent, false);
+            ViewHolderImg vh1 = new ViewHolderImg(view);
+            return vh1;
+        }
+
     }
 
     @Override
-    public void onBindViewHolder(QuestAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         // holder.tvName.setText("");
-        Map<Integer,Boolean> integers = new HashMap<>();
-        if (position % 2 == 0) {
-            integers.clear();
-            integers.put(0,true);
-            holder.topicLayout.setSelected(integers).setData("ceshi",null,TopicLayout.TOPIC_TY_ONLY);
-        } else {
-            integers.clear();
-            integers.put(3,true);
-            integers.put(1,true);
-            holder.topicLayout.setSelected(integers).setData("ceshi",null,TopicLayout.TOPIC_TY_MORE);
+        if (holder instanceof QuestAdapter.ViewHolder) {
+            Map<Integer, Boolean> integers = new HashMap<>();
+            if (position % 2 == 0) {
+                integers.clear();
+                integers.put(0, true);
+                ((QuestAdapter.ViewHolder) holder).topicLayout.setSelected(integers).setData("ceshi", null, TopicLayout.TOPIC_TY_ONLY);
+            } else {
+                integers.clear();
+                integers.put(3, true);
+                integers.put(1, true);
+                ((QuestAdapter.ViewHolder) holder).topicLayout.setSelected(integers).setData("ceshi", null, TopicLayout.TOPIC_TY_MORE);
+            }
+
         }
 
-      //  holder.topicLayout.setData("ceshi",null,);
+        //  holder.topicLayout.setData("ceshi",null,);
     }
 
 
@@ -58,6 +74,15 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder> 
     public int getItemCount() {
         //return mData.size();
         return 20;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (position == 0) {
+            return ITEM_TYPE_0;
+        } else {
+            return ITEM_TYPE_1;
+        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -75,11 +100,25 @@ public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder> 
             topicLayout.setOnResultCallback(new TopicLayout.OnResultCallback() {
                 @Override
                 public void selectCallback(int pos) {
-                    Log.e("checked","pos:"+pos);
+                    Log.e("checked", "pos:" + pos);
 
 
                 }
             });
+        }
+    }
+
+    class ViewHolderImg extends RecyclerView.ViewHolder {
+        // public TextView tvName;
+        ImageView ImgView;
+
+        public ViewHolderImg(View itemView) {
+            super(itemView);
+            initView(itemView);
+        }
+
+        private void initView(View itemView) {
+
         }
     }
 

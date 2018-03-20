@@ -1,17 +1,24 @@
 package com.example.simple.widget.scollerLayout;
 
 import android.content.Context;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+
+import com.example.simple.R;
 
 /**
  * Created by guozhk on 2018/3/19.
  */
 
 public class TouchCallbackLayout extends FrameLayout {
+        private String TAG = TouchCallbackLayout.class.getSimpleName();
 
     public void setTouchEventListener(TouchEventListener touchEventListener) {
         mTouchEventListener = touchEventListener;
@@ -20,12 +27,16 @@ public class TouchCallbackLayout extends FrameLayout {
     private TouchEventListener mTouchEventListener;
 
     public TouchCallbackLayout(Context context) {
-        super(context);
+        this(context,null);
     }
 
     public TouchCallbackLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs,0);
     }
+
+
+
+
 
     public TouchCallbackLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);

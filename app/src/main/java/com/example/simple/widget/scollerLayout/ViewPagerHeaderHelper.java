@@ -31,8 +31,6 @@ public class ViewPagerHeaderHelper {
 
     private boolean mIsHeaderExpand = true;
 
-   // private OnViewPagerTouchListener mListener;
-
     private int mTouchSlop;
     private int mMinimumFlingVelocity;
     private int mMaximumFlingVelocity;
@@ -59,18 +57,7 @@ public class ViewPagerHeaderHelper {
         this.mViewPager = mViewPager;
         this.mHeaderView = mHeaderView;
         this.mScrollableListenerArrays = mScrollableListenerArrays;
-        //mListener = listener;
     }
-
-//    public ViewPagerHeaderHelper(Context context, OnViewPagerTouchListener listener) {
-//        ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
-//        mTouchSlop = viewConfiguration.getScaledTouchSlop();
-//        mMinimumFlingVelocity = viewConfiguration.getScaledMinimumFlingVelocity();
-//        mMaximumFlingVelocity = viewConfiguration.getScaledMaximumFlingVelocity();
-//
-//        //mListener = listener;
-//    }
-
     public boolean onLayoutInterceptTouchEvent(MotionEvent event, int headerHeight) {
         mHeaderHeight = headerHeight;
 
@@ -222,21 +209,6 @@ public class ViewPagerHeaderHelper {
     public float getLastMotionY() {
         return mLastMotionY;
     }
-
-
-    public interface OnViewPagerTouchListener {
-
-        boolean isViewBeingDragged(MotionEvent event);
-
-        void onMoveStarted(float eventY);
-
-        void onMove(float eventY, float yDx);
-
-        void onMoveEnded(boolean isFling, float flingVelocityY);
-    }
-
-
-
 
 
     public boolean isViewBeingDragged(MotionEvent event) {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="id_stickynavlayout_head" type="id"/>
+    <item name="id_stickynavlayout_head_tab" type="id"/>
+    <item name="id_stickynavlayout_head_content" type="id"/>
+    <item name="id_stickynavlayout_content" type="id"/>
+
+</resources>  

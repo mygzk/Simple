@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#e65411"></LinearLayout>
+
+    <com.example.simple.widget.scollerLayout.TouchCallbackLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cumulative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.simple.ui.ScrollTabActivity">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/cumulative_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="48dp" />
+
+
+        <LinearLayout
+            android:id="@+id/cumulative_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/cumulative_header_content"
+                android:layout_width="match_parent"
+                android:layout_height="123dp"
+                android:background="#73ea0a"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/cumulative_header_Tab"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#123"
+                android:orientation="vertical" />
+
+
+        </LinearLayout>
+
+    </com.example.simple.widget.scollerLayout.TouchCallbackLayout>
+</LinearLayout>

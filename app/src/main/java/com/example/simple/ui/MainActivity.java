@@ -70,6 +70,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("EvenBusTestActivity", EvenBusTestActivity.class));
         mDatas.add(new MyBean("PressDemoActivity", PressDemoActivity.class));
         mDatas.add(new MyBean("QuestbankActivity", QuestbankActivity.class));
+        mDatas.add(new MyBean("ScrollTabActivity", ScrollTabActivity.class));
 
     }
 

@@ -37,6 +37,7 @@
     <dimen name="title_size15">15sp</dimen>
     <dimen name="custom_form_item_title_width">94dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="mine_tabs_height">48dp</dimen>
 
 
 </resources>

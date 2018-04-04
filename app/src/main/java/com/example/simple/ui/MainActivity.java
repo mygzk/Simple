@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -52,6 +53,7 @@ public class MainActivity extends BaseActivity {
                 MainActivity.this.startActivity(i);
             }
         });
+        getD();
 
     }
 
@@ -189,5 +191,12 @@ public class MainActivity extends BaseActivity {
 //        Log.e(TAG, "====onSaveInstanceState 1111=====");
 //        super.onSaveInstanceState(outState, outPersistentState);
 //    }
+
+
+    private void getD(){
+        DisplayMetrics metrics=new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        Log.e("main","metrics:"+metrics.toString());
+    }
 
 }

@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
  * Created by guozhk on 2018/3/19.
  */
 
-public class ViewPagerHeaderHelper {
+public class ViewPagerHeaderHelper1 {
 
 
     private int mHeaderHeight;
@@ -45,10 +45,10 @@ public class ViewPagerHeaderHelper {
 
     private SparseArrayCompat<ScrollableListener> mScrollableListenerArrays;
 
-    private ViewPagerHeaderHelper() {
+    private ViewPagerHeaderHelper1() {
     }
 
-    public ViewPagerHeaderHelper(Context context,ViewPager mViewPager,LinearLayout mHeaderView,SparseArrayCompat<ScrollableListener> mScrollableListenerArrays) {
+    public ViewPagerHeaderHelper1(Context context, ViewPager mViewPager, LinearLayout mHeaderView, SparseArrayCompat<ScrollableListener> mScrollableListenerArrays) {
         ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
         mTouchSlop = viewConfiguration.getScaledTouchSlop();
         mMinimumFlingVelocity = viewConfiguration.getScaledMinimumFlingVelocity();

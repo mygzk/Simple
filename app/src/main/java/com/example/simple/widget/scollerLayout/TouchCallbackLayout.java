@@ -1,17 +1,9 @@
 package com.example.simple.widget.scollerLayout;
 
 import android.content.Context;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-
-import com.example.simple.R;
 
 /**
  * Created by guozhk on 2018/3/19.

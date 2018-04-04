@@ -6,13 +6,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.util.SparseArrayCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.view.animation.DecelerateInterpolator;
-import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 
 import com.example.simple.R;
@@ -20,8 +16,7 @@ import com.example.simple.fragment.ListFragmentFragment;
 import com.example.simple.widget.scollerLayout.ScrollableFragmentListener;
 import com.example.simple.widget.scollerLayout.ScrollableListener;
 import com.example.simple.widget.scollerLayout.TouchCallbackLayout;
-import com.example.simple.widget.scollerLayout.TouchCallbackLayout1;
-import com.example.simple.widget.scollerLayout.ViewPagerHeaderHelper;
+import com.example.simple.widget.scollerLayout.ViewPagerHeaderHelper1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,12 +33,12 @@ public class ScrollTabActivity extends BaseActivity implements
     private LinearLayout mHeadTab;
 
     private TouchCallbackLayout touchCallbackLayout;
-    private ViewPagerHeaderHelper mViewPagerHeaderHelper;
+    private ViewPagerHeaderHelper1 mViewPagerHeaderHelper;
 
 
     private SparseArrayCompat<ScrollableListener> mScrollableListenerArrays =
             new SparseArrayCompat<>();
-    private int mTouchSlop;
+
     private int mHeaderHeight;
 
     @Override
@@ -114,7 +109,7 @@ public class ScrollTabActivity extends BaseActivity implements
            }
        });
 
-       mViewPagerHeaderHelper = new ViewPagerHeaderHelper(this,mViewPager,mHeaderView,mScrollableListenerArrays);
+       mViewPagerHeaderHelper = new ViewPagerHeaderHelper1(this,mViewPager,mHeaderView,mScrollableListenerArrays);
        touchCallbackLayout.setTouchEventListener(this);
    }
 

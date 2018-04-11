@@ -2,8 +2,6 @@ package com.example.simple.ui;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -17,15 +15,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.simple.R;
-import com.example.simple.evenBean.TestMessEven;
-import com.example.simple.widget.MyFragLayout;
-
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
+import com.example.simple.ui.Coordinator.CoordinatorSimpleActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.jar.Manifest;
 
 public class MainActivity extends BaseActivity {
     private String TAG = MainActivity.class.getSimpleName();
@@ -73,6 +66,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("PressDemoActivity", PressDemoActivity.class));
         mDatas.add(new MyBean("QuestbankActivity", QuestbankActivity.class));
         mDatas.add(new MyBean("ScrollTabActivity", ScrollTabActivity.class));
+        mDatas.add(new MyBean("CoordinatorSimpleActivity", CoordinatorSimpleActivity.class));
 
     }
 

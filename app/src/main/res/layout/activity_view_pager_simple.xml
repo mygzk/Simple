@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipChildren="false"
     android:background="#123"
+    android:clipChildren="false"
     tools:context="com.example.simple.ui.scaleView.ViewPagerSimpleActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
-        android:overScrollMode="never"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
-        android:clipChildren="false" />
+        android:layout_height="200dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_gravity="center"
+        android:clipChildren="false"
+        android:overScrollMode="never" />
 </FrameLayout>

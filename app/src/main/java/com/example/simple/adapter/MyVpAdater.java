@@ -1,10 +1,11 @@
 package com.example.simple.adapter;
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+import com.example.simple.ui.scaleView.CardFragment;
 
 import java.util.List;
 
@@ -12,38 +13,26 @@ import java.util.List;
  * Created by guozhk on 2018/4/12.
  */
 
-public class MyVpAdater extends PagerAdapter {
-    private List<Integer> list;
+public class MyVpAdater extends FragmentPagerAdapter {
+    private List<CardFragment> list;
     private Context context;
 
-    public MyVpAdater(Context context, List<Integer> list) {
-        this.context = context;
+
+    public MyVpAdater(FragmentManager fm, Context context,List<CardFragment> list ) {
+        super(fm);
         this.list = list;
+        this.context = context;
     }
+
 
     @Override
     public int getCount() {
         return list.size();
     }
 
-    @Override
-    public boolean isViewFromObject(View view, Object object) {
-        return view == object;
-    }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
-        ImageView iv = new ImageView(context);
-        iv.setImageResource(list.get(position));
-        container.addView(iv);
-        return iv;
+    public Fragment getItem(int position) {
+        return list.get(position);
     }
-
-    @Override
-    public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((View) object);
-    }
-
-
-
 }

@@ -22,16 +22,23 @@ public class ViewPagerSimpleActivity extends BaseActivity {
     @Override
     protected void initView() {
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        viewPager.setPageMargin(80);
+        viewPager.setPageMargin(0);
         viewPager.setOffscreenPageLimit(3);
-        List<Integer> list = new ArrayList<>();
-        list.add(R.drawable.page_guide_first_bg);
-        list.add(R.drawable.page_guide_second_bg);
-        list.add(R.drawable.page_guide_third_bg);
-        list.add(R.drawable.page_guide_four_bg);
-        list.add(R.drawable.page_launch_icon);
-        MyVpAdater adater = new MyVpAdater(this, list);
+//        List<Integer> list = new ArrayList<>();
+//        list.add(R.drawable.page_guide_first_bg);
+//        list.add(R.drawable.page_guide_second_bg);
+//        list.add(R.drawable.page_guide_third_bg);
+//        list.add(R.drawable.page_guide_four_bg);
+//        list.add(R.drawable.page_launch_icon);
+        List<CardFragment> list = new ArrayList<>();
+        for (int i=0;i<5;i++){
+            CardFragment cardFragment = CardFragment.newInstance(i);
+            list.add(cardFragment);
+        }
+
+
+        MyVpAdater adater = new MyVpAdater(getSupportFragmentManager(),this, list);
         viewPager.setAdapter(adater);
-        viewPager.setPageTransformer(false, new ScaleTransformer());
+       viewPager.setPageTransformer(false, new ScaleTransformer());
     }
 }

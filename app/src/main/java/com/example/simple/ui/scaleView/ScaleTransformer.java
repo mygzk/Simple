@@ -19,15 +19,16 @@ public class ScaleTransformer implements ViewPager.PageTransformer{
             page.setAlpha(MIN_ALPHA);
             page.setScaleX(MIN_SCALE);
             page.setScaleY(MIN_SCALE);
+
         } else if (position <= 1) { // [-1,1]
             float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));
             if (position < 0) {
-                float scaleX = 1 + 0.3f * position;
+                float scaleX = 1 + 0.1f * position;
                 Log.d("google_lenve_fb", "transformPage: scaleX:" + scaleX);
                 page.setScaleX(scaleX);
                 page.setScaleY(scaleX);
             } else {
-                float scaleX = 1 - 0.3f * position;
+                float scaleX = 1 - 0.1f * position;
                 page.setScaleX(scaleX);
                 page.setScaleY(scaleX);
             }

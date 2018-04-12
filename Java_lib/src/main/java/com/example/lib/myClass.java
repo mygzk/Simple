@@ -18,17 +18,6 @@ static     int[] array = {3,1,5,7,2,4,9,6,10,8};
     public static void main(String[] args) {
 
 
-//        InsertSort obj=new InsertSort();
-//        obj.insertSort(array);
-//
-//        printArry(array);
-
-        // ShellSort shellSort = new ShellSort();
-        // shellSort.shellSort(array);
-
-        //toSort(new BubbleSort());
-
-
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         try {
             System.out.println(getDaysOfMonth(sdf.parse("2015-02-2")));

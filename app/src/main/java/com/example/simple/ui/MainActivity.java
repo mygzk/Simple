@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.simple.R;
 import com.example.simple.ui.Coordinator.CoordinatorSimpleActivity;
+import com.example.simple.ui.scaleView.ViewPagerSimpleActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +68,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("QuestbankActivity", QuestbankActivity.class));
         mDatas.add(new MyBean("ScrollTabActivity", ScrollTabActivity.class));
         mDatas.add(new MyBean("CoordinatorSimpleActivity", CoordinatorSimpleActivity.class));
+        mDatas.add(new MyBean("ViewPagerSimpleActivity", ViewPagerSimpleActivity.class));
 
     }
 

@@ -11,7 +11,7 @@ import android.view.View;
 public class ScaleTransformer implements ViewPager.PageTransformer{
 
     private static final float MIN_SCALE = 0.90f;
-    private static final float MIN_ALPHA = 0.5f;
+    private static final float MIN_ALPHA = 0.9f;
 
     @Override
     public void transformPage(View page, float position) {

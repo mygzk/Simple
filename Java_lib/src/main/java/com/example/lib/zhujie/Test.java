@@ -6,4 +6,12 @@ package com.example.lib.zhujie;
 
 @TestAnnotation
 public class Test {
+
+
+    private void test(int i){
+        switch ( i){
+
+
+        }
+    }
 }

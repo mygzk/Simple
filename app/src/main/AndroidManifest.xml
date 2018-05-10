@@ -44,7 +44,8 @@
         <activity android:name=".ui.DrawActivity" />
         <activity android:name=".ui.DialogActivity" />
         <activity android:name=".ui.DispatchTouchTestActivity" />
-        <activity android:name=".ui.ImgTestActivity" />
+        <activity android:name=".ui.ImgTestActivity"
+            android:configChanges="orientation|screenSize"/>
         <activity android:name=".ui.EvenBusTestActivity" />
         <activity android:name=".ui.PressDemoActivity" />
         <activity
@@ -53,7 +54,15 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".ui.ScrollTabActivity" />
         <activity android:name=".ui.Coordinator.CoordinatorSimpleActivity" />
-        <activity android:name=".ui.scaleView.ViewPagerSimpleActivity"></activity>
+        <activity android:name=".ui.scaleView.ViewPagerSimpleActivity" />
+        <activity
+            android:name=".ui.EditKeyBordActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <service
+            android:name=".services.MyService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

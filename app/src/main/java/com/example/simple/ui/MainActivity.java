@@ -2,7 +2,9 @@ package com.example.simple.ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
@@ -49,6 +51,20 @@ public class MainActivity extends BaseActivity {
         });
         getD();
 
+       initTest();
+
+    }
+
+    private void initTest() {
+
+      new   AsyncTask<String,String,String>(){
+          @Override
+          protected String doInBackground(String... strings) {
+              return null;
+          }
+      }.execute();
+
+
     }
 
     private void initDatas() {
@@ -69,6 +85,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("ScrollTabActivity", ScrollTabActivity.class));
         mDatas.add(new MyBean("CoordinatorSimpleActivity", CoordinatorSimpleActivity.class));
         mDatas.add(new MyBean("ViewPagerSimpleActivity", ViewPagerSimpleActivity.class));
+        mDatas.add(new MyBean("EditKeyBordActivity", EditKeyBordActivity.class));
 
     }
 

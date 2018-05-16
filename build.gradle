@@ -10,6 +10,9 @@ buildscript {
 
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.5'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+
+        //添加apt插件
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
 }
 

@@ -2,6 +2,9 @@ package com.example.demo;
 
 //import android.os.Handler;
 //import android.os.Message;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +15,7 @@ import com.example.demo.module.Student;
 
 import javax.inject.Inject;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends  AppCompatActivity{
     @Inject
     Student student;
     @Override
@@ -22,15 +25,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        Handler handler = new Handler(){
-//            @Override
-//            public void handleMessage(Message msg) {
-//                super.handleMessage(msg);
-//
-//            }
-//        };
+        Handler handler = new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
 
-//        handler.sendEmptyMessage()
+            }
+        };
+
+       // handler.sendEmptyMessage();
 
 
         //DaggerA01SimpleComponent.builder().a01SimpleModule();
@@ -45,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,student.toString(),Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     @Override

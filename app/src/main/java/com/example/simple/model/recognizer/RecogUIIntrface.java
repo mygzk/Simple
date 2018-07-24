@@ -1,4 +1,4 @@
-package com.example.simple.model.kdxf;
+package com.example.simple.model.recognizer;
 
 /**
  * Created by zonglv on 2018/4/10.

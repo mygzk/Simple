@@ -1,10 +1,12 @@
-package com.example.simple.model.kdxf;
+package com.example.simple.model.recognizer.kdxf;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 
+import com.example.simple.model.recognizer.IRecognizerResult;
+import com.example.simple.model.recognizer.IReconginer;
 import com.iflytek.cloud.ErrorCode;
 import com.iflytek.cloud.InitListener;
 import com.iflytek.cloud.RecognizerListener;
@@ -39,7 +41,8 @@ public class SpeechRecognizerUtil implements IReconginer {
         return SpeechRecognizerUtilInstant.INSTANST;
     }
 
-    public SpeechRecognizerUtil init(Context context) {
+    public SpeechRecognizerUtil init(Context context,IRecognizerResult mIRecognizerResult) {
+        this.mIRecognizerResult = mIRecognizerResult;
         mSpeechRecognizer = SpeechRecognizer.createRecognizer(context, mInitListener);
         return this;
     }
@@ -196,7 +199,8 @@ public class SpeechRecognizerUtil implements IReconginer {
 
     }
 
-    public void setmIRecognizerResult(IRecognizerResult mIRecognizerResult) {
+  /*  public SpeechRecognizerUtil setIRecognizerResult(IRecognizerResult mIRecognizerResult) {
         this.mIRecognizerResult = mIRecognizerResult;
-    }
+        return this;
+    }*/
 }

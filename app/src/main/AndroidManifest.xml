@@ -72,7 +72,7 @@
         <activity android:name=".ui.ScrollTabActivity" />
         <activity android:name=".ui.Coordinator.CoordinatorSimpleActivity" />
         <activity android:name=".ui.scaleView.ViewPagerSimpleActivity" />
-        <activity android:name=".model.kdxf.KDXFActivity"></activity>
+        <activity android:name=".model.recognizer.KDXFActivity"></activity>
     </application>
 
 </manifest>

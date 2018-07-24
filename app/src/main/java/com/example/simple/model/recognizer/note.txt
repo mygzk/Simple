@@ -1,0 +1,21 @@
+
+
+
+SpeechRecognizerManager 语音管理类入口
+根据类型选择 百度语音还是科大讯飞 :
+  //科大讯飞
+  public static final int TYPE_KDXF = 1;
+  //百度语音
+  public static final int TYPE_BD = 2;
+
+
+IReconginer 语音类型接口
+
+
+IRecognizerResult 语音识别结果回调
+
+
+RecogUIIntrface 语音UI界面回调
+
+
+

@@ -1,4 +1,4 @@
-package com.example.simple.model.kdxf;
+package com.example.simple.model.recognizer.kdxf;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

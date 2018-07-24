@@ -1,7 +1,11 @@
-package com.example.simple.model.kdxf;
+package com.example.simple.model.recognizer;
+
 import android.content.Context;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.example.simple.model.recognizer.kdxf.SpeechRecognizerUtil;
 
 /**
  * create by guozhk on 2018/7/23
@@ -9,6 +13,8 @@ import android.view.View;
 
 
 public class SpeechRecognizerManager {
+    private String TAG = SpeechRecognizerManager.class.getSimpleName();
+
     //科大讯飞
     public static final int TYPE_KDXF = 1;
     //百度语音
@@ -41,7 +47,9 @@ public class SpeechRecognizerManager {
 
     public void initRecognizer(Context context, int model) {
         if (model == TYPE_KDXF) {
-            mIReconginer = SpeechRecognizerUtil.getInstance().init(context);
+            mIReconginer = SpeechRecognizerUtil.getInstance()
+                    .init(context, mIRecognizerResult);
+
         } else if (model == TYPE_BD) {
 
         } else {
@@ -54,23 +62,26 @@ public class SpeechRecognizerManager {
 
         @Override
         public void initSucc(int code) {
-
+            Log.e(TAG, "======initSucc=====");
         }
 
         @Override
         public void onVolumeChanged(int i) {
-
+            //   Log.e(TAG, "======onVolumeChanged=====i:" + i);
         }
 
         @Override
         public void beginRecognizer() {
             baiduRecogOver = true;
+            Log.e(TAG, "======beginRecognizer=====");
         }
 
         @Override
         public void recognizerResult(String str, boolean isLast) {
             if (isLast) {
                 baiduRecogOver = false;
+                Log.e(TAG, "======recognizerResult=====str:" + str);
+
             }
 
             recogUIIntrface.recogContent(str);
@@ -78,8 +89,9 @@ public class SpeechRecognizerManager {
 
         @Override
         public void error(int errorCode, String msg) {
+            Log.e(TAG, "======error=====errorCode:" + errorCode + " msg:" + msg);
             baiduRecogOver = false;
-            recogUIIntrface.recogError(errorCode,msg);
+            recogUIIntrface.recogError(errorCode, msg);
         }
     };
 

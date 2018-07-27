@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.simple.R;
+import com.example.simple.model.custonviewpager.TabViewpagerActivity;
 import com.example.simple.model.recognizer.KDXFActivity;
 import com.example.simple.ui.Coordinator.CoordinatorSimpleActivity;
 import com.example.simple.ui.scaleView.ViewPagerSimpleActivity;
@@ -71,6 +72,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("CoordinatorSimpleActivity", CoordinatorSimpleActivity.class));
         mDatas.add(new MyBean("ViewPagerSimpleActivity", ViewPagerSimpleActivity.class));
         mDatas.add(new MyBean("科大讯飞SDK", KDXFActivity.class));
+        mDatas.add(new MyBean("TabViewpagerActivity", TabViewpagerActivity.class));
 
     }
 

@@ -121,10 +121,12 @@ public class SpeechRecognizerUtil implements IReconginer {
 
         @Override
         public void onResult(RecognizerResult recognizerResult, boolean b) {
+            Log.e(TAG, "onResult......");
+            String r=printResult(recognizerResult);
             if(mIRecognizerResult!=null){
-                mIRecognizerResult.recognizerResult(result,b);
+                mIRecognizerResult.recognizerResult(r,b);
             }
-            if (printResult(recognizerResult) != null) {
+            if (r != null) {
                 if (result == null) {
                     result = printResult(recognizerResult);
                 } else {

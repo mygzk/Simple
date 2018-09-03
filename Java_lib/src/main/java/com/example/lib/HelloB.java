@@ -14,11 +14,17 @@ public class HelloB extends HelloA {
         System.out.println("s-b");
     }
 
+    {
+        System.out.println("s 000-b");
 
-    public static void main(String[] a){
-        new HelloB();
-        new HelloA();
-        new HelloB();
+    }
+
+    public static void main(String[] ages){
+        HelloA a =    new HelloB();
+        System.out.println("------0000-----");
+        HelloA a1=  new HelloA();
+        System.out.println("------111-----");
+        HelloA a2=  new HelloB();
 
 
 
@@ -26,12 +32,12 @@ public class HelloB extends HelloA {
 
 
 
-        System.out.println("55"+2);
-
-        HelloB b= new HelloB();
-        b.change(b.str,b.ch);
-        System.out.print(b.str+" and ");
-        System.out.print(b.ch);
+//        System.out.println("55"+2);
+//
+//        HelloB b= new HelloB();
+//        b.change(b.str,b.ch);
+//        System.out.print(b.str+" and ");
+//        System.out.print(b.ch);
 
 
     }

@@ -7,10 +7,14 @@ package com.example.lib;
 public class TT {
     public static void main(String[] agr) {
 
+        String s="满30减5元";
+        String str= s.substring(s.indexOf("5")+1,s.length());
+        System.out.println(str);
 
-        System.out.println(finds("he lle"," ll"));
 
-        System.out.println("he lle".indexOf(" ll"));
+//        System.out.println(finds("he lle"," ll"));
+//
+//        System.out.println("he lle".indexOf(" ll"));
 
     }
 
@@ -60,5 +64,8 @@ public class TT {
 
         return -1;
     }
+
+
+
 
 }

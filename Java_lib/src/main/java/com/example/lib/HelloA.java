@@ -9,7 +9,12 @@ public class HelloA {
         System.out.println("c-a");
     }
 
+    {
+        System.out.println("s 000-a");
+
+    }
     static {
         System.out.println("s-a");
     }
+
 }

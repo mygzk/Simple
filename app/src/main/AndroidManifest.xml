@@ -44,8 +44,9 @@
         <activity android:name=".ui.DrawActivity" />
         <activity android:name=".ui.DialogActivity" />
         <activity android:name=".ui.DispatchTouchTestActivity" />
-        <activity android:name=".ui.ImgTestActivity"
-            android:configChanges="orientation|screenSize"/>
+        <activity
+            android:name=".ui.ImgTestActivity"
+            android:configChanges="orientation|screenSize" />
         <activity android:name=".ui.EvenBusTestActivity" />
         <activity android:name=".ui.PressDemoActivity" />
         <activity
@@ -62,7 +63,9 @@
         <service
             android:name=".services.MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".ui.RecyleViewTestActivity"></activity>
     </application>
 
 </manifest>

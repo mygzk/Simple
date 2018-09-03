@@ -1,5 +1,6 @@
 package com.org.example;
 
+import android.animation.ObjectAnimator;
 import android.app.Fragment;
 import android.support.v4.util.LruCache;
 import android.support.v7.app.AppCompatActivity;
@@ -55,11 +56,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-       // FrameLayout f;
+       // FrameLayout f=new FrameLayout(this);
 
 
 
 
+       // ObjectAnimator animator = ObjectAnimator.ofFloat("", "scaleY", 1f, 3f, 1f);
+
+      //  animator.setDuration(5000);
+      //  animator.start();
     }
 
 

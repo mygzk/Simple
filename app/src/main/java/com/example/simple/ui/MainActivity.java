@@ -18,8 +18,10 @@ import android.widget.TextView;
 
 import com.example.simple.R;
 import com.example.simple.ui.Coordinator.CoordinatorSimpleActivity;
-import com.example.simple.ui.diapatchview.DispatchViewTestActivity;
+import com.example.simple.ui.rctest.RcTestAdapter;
+import com.example.simple.ui.rctest.RecyleViewTestActivity;
 import com.example.simple.ui.scaleView.ViewPagerSimpleActivity;
+import com.example.simple.widget.MyText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +40,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        Handler handler = new Handler();
+
         lsView = (ListView) findViewById(R.id.testlist);
         initDatas();
         adapter = new MyAdapter(this, mDatas);
@@ -89,6 +93,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("ViewPagerSimpleActivity", ViewPagerSimpleActivity.class));
         mDatas.add(new MyBean("EditKeyBordActivity", EditKeyBordActivity.class));
         mDatas.add(new MyBean("RecyleViewTestActivity", RecyleViewTestActivity.class));
+        mDatas.add(new MyBean("LruCacheTestActivity", LruCacheTestActivity.class));
 
     }
 
@@ -121,7 +126,7 @@ public class MainActivity extends BaseActivity {
             HolderView holderView = null;
             if (convertView == null) {
                 holderView = new HolderView();
-                TextView tv = new TextView(context);
+                MyText tv = new MyText(context);
                 tv.setGravity(Gravity.CENTER);
                 int itemHeight = (int) (context.getResources().getDisplayMetrics().density * 46);
                 AbsListView.LayoutParams lp =

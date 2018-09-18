@@ -59,13 +59,20 @@
         <activity
             android:name=".ui.EditKeyBordActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.PremissionTestActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <service
             android:name=".services.MyService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ui.RecyleViewTestActivity"></activity>
+        <activity android:name=".ui.rctest.RecyleViewTestActivity" />
+        <activity
+            android:name=".ui.LruCacheTestActivity"
+            android:label="@string/title_activity_lru_cache_test"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

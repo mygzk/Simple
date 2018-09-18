@@ -1,20 +1,21 @@
-package com.example.simple.ui;
+package com.example.simple.ui.rctest;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.LinearLayout;
 
 import com.example.simple.R;
-import com.example.simple.adapter.RcTestAdapter;
+import com.example.simple.ui.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyleViewTestActivity extends BaseActivity {
+/**
+ * Created by guozhk on 2018/9/3.
+ */
+public  class RecyleViewTestActivity extends BaseActivity {
 
-   private RecyclerView rc;
+    private RecyclerView rc;
     private List<String> mDatas;
     private RcTestAdapter mAdapter;
 
@@ -32,6 +33,15 @@ public class RecyleViewTestActivity extends BaseActivity {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         rc.setLayoutManager(manager);
+
+
+        rc.addItemDecoration(new RecycleViewDivider(rc.getContext(),
+                manager.getOrientation()));
+
+//        rc.addItemDecoration(new DividerItemDecoration(rc.getContext(),
+//                manager.getOrientation());
+
+
 
         mDatas = new ArrayList<>();
 

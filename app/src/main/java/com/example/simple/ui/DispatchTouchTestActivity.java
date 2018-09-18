@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.bumptech.glide.Glide;
 import com.example.simple.R;
 import com.example.simple.widget.MyFragLayout;
 import com.example.simple.widget.MyText;
@@ -24,18 +25,18 @@ public class DispatchTouchTestActivity extends AppCompatActivity {
         initView();
 
 
-        Handler handler;
+   //     Glide.with(this).load("").into(null);
     }
 
     private void initView() {
         MyText myText = findViewById(R.id.dispath_tv) ;
-//        myText.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.e(TAG, "myText view click ");
-//
-//            }
-//        });
+        myText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e(TAG, "myText view click ");
+
+            }
+        });
 
 
 

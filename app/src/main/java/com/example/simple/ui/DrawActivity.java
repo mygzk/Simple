@@ -33,6 +33,7 @@ public class DrawActivity extends AppCompatActivity implements View.OnClickListe
                 mCirecleView.setProgressNotInUiThread(80);
                 break;
             case R.id.draw_duihao:
+
                // mCirecleView.clear();
                 break;
             default:

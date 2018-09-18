@@ -28,6 +28,8 @@ public class MyText extends TextView {
 
     public MyText(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+
+
     }
 
     @Override
@@ -39,6 +41,7 @@ public class MyText extends TextView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        Log.e(TAG,"=====MyText=====onTouchEvent=====event:"+event.toString());
         boolean dis = super.onTouchEvent(event);
         Log.e(TAG,"=====MyText=====onTouchEvent=====dis:"+dis);
         return dis;

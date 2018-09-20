@@ -35,4 +35,16 @@
         android:layout_margin="10dp"/>
 
 
+    <com.example.simple.widget.CircleView
+        android:background="#456"
+        android:id="@+id/progress_circle_1"
+        android:padding="5dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:circleWidth="6dp"
+        app:firstColor="#d3d3d3"
+        app:secondColor="#3B95C8"
+        android:minWidth="100dp"/>
+
+
 </LinearLayout>

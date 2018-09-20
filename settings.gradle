@@ -1,4 +1,4 @@
-include ':app', ':groovy', ':myfirstlibs', ':Java_lib', ':dragger2demo'
+include ':app', ':groovy', ':myfirstlibs', ':Java_lib', ':dragger2demo', ':viewpagertest'
 include ':library:Common'
 include ':library:WheelPicker'
 

@@ -30,13 +30,13 @@ public class DispatchTouchTestActivity extends AppCompatActivity {
 
     private void initView() {
         MyText myText = findViewById(R.id.dispath_tv) ;
-        myText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e(TAG, "myText view click ");
-
-            }
-        });
+//        myText.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.e(TAG, "myText view click ");
+//
+//            }
+//        });
 
 
 
@@ -45,8 +45,9 @@ public class DispatchTouchTestActivity extends AppCompatActivity {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.e(TAG, "=====DispatchTouchTestActivity=====dispatchTouchEvent 000=====dis:");
        boolean dis = super.dispatchTouchEvent(ev);
-        Log.e(TAG, "=====DispatchTouchTestActivity=====dispatchTouchEvent=====dis:"+dis);
+        Log.e(TAG, "=====DispatchTouchTestActivity=====dispatchTouchEvent 111=====dis:"+dis);
 
          return dis;
     }

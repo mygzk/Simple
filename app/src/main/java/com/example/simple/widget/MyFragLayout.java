@@ -32,8 +32,9 @@ public class MyFragLayout extends FrameLayout {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.e(TAG,"=====MyFragLayout=====dispatchTouchEvent 000=====dis:");
         boolean dis = super.dispatchTouchEvent(ev);
-        Log.e(TAG,"=====MyFragLayout=====dispatchTouchEvent=====dis:"+dis);
+        Log.e(TAG,"=====MyFragLayout=====dispatchTouchEvent 111=====dis:"+dis);
         return dis;
     }
 
@@ -41,6 +42,7 @@ public class MyFragLayout extends FrameLayout {
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         boolean dis = super.onInterceptTouchEvent(ev);
+      //  dis=true;
         Log.e(TAG,"=====MyFragLayout=====onInterceptTouchEvent=====dis:"+dis);
         return dis;
     }
@@ -48,6 +50,7 @@ public class MyFragLayout extends FrameLayout {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         boolean dis = super.onTouchEvent(event);
+        dis =true;
         Log.e(TAG,"=====MyFragLayout=====onTouchEvent=====dis:"+dis);
         return dis;
     }

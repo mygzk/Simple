@@ -34,8 +34,9 @@ public class MyText extends TextView {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
+        Log.e(TAG,"=====MyText=====dispatchTouchEvent 000=====dis:");
         boolean dis = super.dispatchTouchEvent(event);
-        Log.e(TAG,"=====MyText=====dispatchTouchEvent=====dis:"+dis);
+        Log.e(TAG,"=====MyText=====dispatchTouchEvent 111=====dis:"+dis);
         return dis;
     }
 
@@ -52,3 +53,4 @@ public class MyText extends TextView {
 
 
 }
+

@@ -6,9 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.simple.R;
+import com.example.simple.utils.TextViewUtils;
 import com.squareup.picasso.Picasso;
 
 public class ImgTestActivity extends AppCompatActivity {
@@ -30,6 +32,13 @@ public class ImgTestActivity extends AppCompatActivity {
     String imgUrl2="http://img.ycwb.com/news/attachement/gif/site2/20160921/507b9d762551194c19be5f.gif";
 
     private void initView() {
+        String te="dasdasdadadadas萨芬发大水发士大夫撒打发士大夫撒地方萨芬撒发顺丰是电风扇地方萨芬撒打发士大夫撒飞洒发士大夫撒地方撒";
+        TextView tv =findViewById(R.id.text_appand_img);
+
+        TextViewUtils.addDrawableInEnd(tv,this,   getResources().getDrawable(R.drawable.ic_launcher),te);
+
+
+
         img0 = (ImageView) findViewById(R.id.imgtest_0);
         img1 = (ImageView) findViewById(R.id.imgtest_1);
         img2 = (ImageView) findViewById(R.id.imgtest_2);

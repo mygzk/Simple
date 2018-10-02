@@ -40,7 +40,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        Handler handler = new Handler();
+
+
+
 
         lsView = (ListView) findViewById(R.id.testlist);
         initDatas();

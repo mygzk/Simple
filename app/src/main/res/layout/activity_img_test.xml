@@ -11,6 +11,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/text_appand_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+        />
+
+
         <ImageView
             android:id="@+id/imgtest_0"
             android:layout_width="wrap_content"

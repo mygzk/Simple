@@ -35,9 +35,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.WheelActivity" />
-        <activity android:name=".ui.LinkActivity" />
-        <activity android:name=".ui.XuanfuActivity" />
         <activity android:name=".ui.ModifyStatusStytleActivity" />
         <activity android:name=".ui.PhoneConnectsActivity" />
         <activity android:name=".ui.CheckPremissActivity" />
@@ -48,7 +45,6 @@
             android:name=".ui.ImgTestActivity"
             android:configChanges="orientation|screenSize" />
         <activity android:name=".ui.EvenBusTestActivity" />
-        <activity android:name=".ui.PressDemoActivity" />
         <activity
             android:name=".ui.QuestbankActivity"
             android:label="@string/title_activity_questbank"
@@ -56,9 +52,6 @@
         <activity android:name=".ui.ScrollTabActivity" />
         <activity android:name=".ui.Coordinator.CoordinatorSimpleActivity" />
         <activity android:name=".ui.scaleView.ViewPagerSimpleActivity" />
-        <activity
-            android:name=".ui.EditKeyBordActivity"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".ui.PremissionTestActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
@@ -69,10 +62,6 @@
             android:exported="true" />
 
         <activity android:name=".ui.rctest.RecyleViewTestActivity" />
-        <activity
-            android:name=".ui.LruCacheTestActivity"
-            android:label="@string/title_activity_lru_cache_test"
-            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

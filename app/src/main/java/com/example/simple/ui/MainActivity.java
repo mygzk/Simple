@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
@@ -18,7 +17,6 @@ import android.widget.TextView;
 
 import com.example.simple.R;
 import com.example.simple.ui.Coordinator.CoordinatorSimpleActivity;
-import com.example.simple.ui.rctest.RcTestAdapter;
 import com.example.simple.ui.rctest.RecyleViewTestActivity;
 import com.example.simple.ui.scaleView.ViewPagerSimpleActivity;
 import com.example.simple.widget.MyText;
@@ -42,8 +40,6 @@ public class MainActivity extends BaseActivity {
     protected void initView() {
 
 
-
-
         lsView = (ListView) findViewById(R.id.testlist);
         initDatas();
         adapter = new MyAdapter(this, mDatas);
@@ -58,44 +54,38 @@ public class MainActivity extends BaseActivity {
         });
         getD();
 
-       initTest();
+        initTest();
 
     }
 
     private void initTest() {
 
-      new   AsyncTask<String,String,String>(){
-          @Override
-          protected String doInBackground(String... strings) {
-              return null;
-          }
-      }.execute();
+        new AsyncTask<String, String, String>() {
+            @Override
+            protected String doInBackground(String... strings) {
+                return null;
+            }
+        }.execute();
 
 
     }
 
     private void initDatas() {
         mDatas = new ArrayList<>();
-        mDatas.add(new MyBean("WheelActivity", WheelActivity.class));
-        mDatas.add(new MyBean("LinkActivity", LinkActivity.class));
-        mDatas.add(new MyBean("XuanfuActivity", XuanfuActivity.class));
         mDatas.add(new MyBean("ModifyStatusStytleActivity", ModifyStatusStytleActivity.class));
         mDatas.add(new MyBean("CheckPremissActivity", CheckPremissActivity.class));
         mDatas.add(new MyBean("PremissionTestActivity", PremissionTestActivity.class));
         mDatas.add(new MyBean("DialogActivity", DialogActivity.class));
         mDatas.add(new MyBean("DrawActivity", DrawActivity.class));
         mDatas.add(new MyBean("DispatchTouchTestActivity", DispatchTouchTestActivity.class));
-      //  mDatas.add(new MyBean("DispatchTouchTestActivity", DispatchViewTestActivity.class));
         mDatas.add(new MyBean("ImgTestActivity", ImgTestActivity.class));
         mDatas.add(new MyBean("EvenBusTestActivity", EvenBusTestActivity.class));
-        mDatas.add(new MyBean("PressDemoActivity", PressDemoActivity.class));
         mDatas.add(new MyBean("QuestbankActivity", QuestbankActivity.class));
         mDatas.add(new MyBean("ScrollTabActivity", ScrollTabActivity.class));
         mDatas.add(new MyBean("CoordinatorSimpleActivity", CoordinatorSimpleActivity.class));
         mDatas.add(new MyBean("ViewPagerSimpleActivity", ViewPagerSimpleActivity.class));
-        mDatas.add(new MyBean("EditKeyBordActivity", EditKeyBordActivity.class));
         mDatas.add(new MyBean("RecyleViewTestActivity", RecyleViewTestActivity.class));
-        mDatas.add(new MyBean("LruCacheTestActivity", LruCacheTestActivity.class));
+
 
     }
 
@@ -216,10 +206,10 @@ public class MainActivity extends BaseActivity {
 //    }
 
 
-    private void getD(){
-        DisplayMetrics metrics=new DisplayMetrics();
+    private void getD() {
+        DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        Log.e("main","metrics:"+metrics.toString());
+        Log.e("main", "metrics:" + metrics.toString());
     }
 
 }

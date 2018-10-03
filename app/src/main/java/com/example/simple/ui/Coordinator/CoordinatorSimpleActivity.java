@@ -1,9 +1,6 @@
 package com.example.simple.ui.Coordinator;
 
 
-import android.graphics.Color;
-import android.support.design.widget.CollapsingToolbarLayout;
-
 import com.example.simple.R;
 import com.example.simple.ui.BaseActivity;
 

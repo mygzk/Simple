@@ -40,4 +40,22 @@
         android:text="test3"
         android:textColor="#fff" />
 
+    <com.example.simple.widget.BiddingItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:label_text="测试"
+        app:label_text_size="12sp"
+        app:label_text_color="@color/form_font_corlor2"
+        app:content_tv_text_color="@color/form_font_corlor2"
+        app:content_tv_text_size="12sp"
+        app:content="测试"
+        app:img_right="@drawable/page_share_icon"
+        android:paddingLeft="10dp" />
+
+    <com.example.simple.widget.BiddingItemLayout
+        android:layout_width="match_parent"
+        app:label_text="测试12"
+        app:label_text_color="@color/colorAccent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

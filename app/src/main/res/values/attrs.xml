@@ -6,5 +6,30 @@
         <attr name="firstColor" format="color" />
         <attr name="secondColor" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="bindding_item">
+        <attr name="label_text" format="string" />
+        <attr name="label_text_size" format="dimension" />
+        <attr name="label_text_color" format="color" />
+
+        <attr name="content" format="string" />
+        <attr name="content_tv_text_size" format="dimension" />
+        <attr name="content_tv_text_color" format="color" />
+        <attr name="content_ev_text_size" format="dimension" />
+        <attr name="content_ev_text_color" format="color" />
+
+        <attr name="content_hint" format="string" />
+        <attr name="content_hint_color" format="string" />
+        <attr name="content_hint_size" format="dimension" />
+        <attr name="hint_ev_text_size" format="dimension" />
+        <attr name="hint_ev_text_color" format="color" />
+
+        <attr name="img_right" format="reference" />
+
+        <attr name="type" format="enum">
+            <enum name="tv" value="0" />
+            <enum name="ev" value="1" />
+        </attr>
+    </declare-styleable>
 </resources>
 

@@ -25,11 +25,14 @@
         <attr name="hint_ev_text_color" format="color" />
 
         <attr name="img_right" format="reference" />
+        <attr name="img_visible" format="boolean" />
 
         <attr name="type" format="enum">
             <enum name="tv" value="0" />
             <enum name="ev" value="1" />
         </attr>
+
+
     </declare-styleable>
 </resources>
 

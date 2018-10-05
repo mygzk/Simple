@@ -36,6 +36,9 @@ public class RcTestAdapter extends RecyclerView.Adapter<RcTestAdapter.HoderView>
     public void onBindViewHolder(HoderView holder, int position) {
         holder.tv.setText(mDatas.get(position));
 
+
+       // notifyItemRangeRemoved();
+
     }
 
     @Override

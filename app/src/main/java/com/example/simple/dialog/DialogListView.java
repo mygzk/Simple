@@ -45,6 +45,8 @@ public class DialogListView extends FrameLayout {
         initView();
     }
 
+    boolean checkAll = false;
+
     private void initView() {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.dialog_list, this);
         dialogTitleLayout = view.findViewById(R.id.dialog_title_layout);
@@ -56,6 +58,35 @@ public class DialogListView extends FrameLayout {
         mADapter = new DialogAdapter(mdatas, true);
 
         mDialogRc.setAdapter(mADapter);
+
+
+        view.findViewById(R.id.dialog_bottom_left).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkAll) {
+                    checkAll = false;
+                    mADapter.selectOrCancelAll(true);
+                } else {
+                    checkAll = true;
+                    mADapter.selectOrCancelAll(false);
+                }
+            }
+        });
+
+        view.findViewById(R.id.dialog_bottom_left_dele).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mADapter.removeSelect();
+            }
+        });
+        view.findViewById(R.id.dialog_bottom_label).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mADapter.getSelectPos();
+            }
+        });
+
+
     }
 
 

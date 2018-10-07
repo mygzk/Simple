@@ -67,7 +67,7 @@ public class DialogActivity extends AppCompatActivity {
 
         DialogListView dialogListView = new DialogListView(this);
         List<String> datas = new ArrayList<>();
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 25; i++) {
             datas.add("test-" + i);
         }
 

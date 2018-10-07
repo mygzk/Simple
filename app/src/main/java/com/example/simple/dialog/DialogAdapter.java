@@ -3,19 +3,17 @@ package com.example.simple.dialog;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.simple.R;
-import com.example.simple.adapter.QuestAdapter;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by guozhk on 2018/10/7.
@@ -24,13 +22,14 @@ import java.util.Map;
 public class DialogAdapter extends RecyclerView.Adapter<DialogAdapter.HoderView> {
 
     private List<String> mDatas;
-    private Map<Integer, Boolean> mCbMap;
+    private SparseBooleanArray mCbMap;
     private boolean mCh = false;
 
-    private boolean mOnBind = false;;
+    private boolean mOnBind = false;
+    ;
 
     public DialogAdapter(List<String> mDatas) {
-         this(mDatas, false);
+        this(mDatas, false);
     }
 
     public DialogAdapter(List<String> mDatas, boolean ch) {
@@ -39,12 +38,9 @@ public class DialogAdapter extends RecyclerView.Adapter<DialogAdapter.HoderView>
         initCheckMap();
     }
 
-    private void initCheckMap(){
+    private void initCheckMap() {
         if (mCh) {
-            mCbMap = new HashMap<>();
-            for (int i = 0; i < mDatas.size(); i++) {
-                mCbMap.put(i, false);
-            }
+            mCbMap = new SparseBooleanArray();
         }
     }
 
@@ -68,28 +64,29 @@ public class DialogAdapter extends RecyclerView.Adapter<DialogAdapter.HoderView>
 
     @Override
     public void onBindViewHolder(@NonNull HoderView holder, final int position) {
-        Log.e("adpter","position:"+position);
-        mOnBind=true;
         holder.tvtip.setText(mDatas.get(position));
 
         if (mCh) {
+            holder.checkBox.setChecked(mCbMap.get(position));
 
-            holder.cb.setChecked(mCbMap.get(position));
-            mOnBind=false;
-            holder.cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            holder.checkBox.setChecked(mCbMap.get(position));
+
+            holder.checkBox.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    Log.e("adpter","position:"+position);
-                    Log.e("adpter","isChecked:"+isChecked);
-                    mCbMap.put(position, isChecked);
-                    if(!mOnBind){
-                        //notifyItemChanged(position);
-                        notifyDataSetChanged();
-                    }
-
-
+                public void onClick(View v) {
+                    checkCheckBox(position, !mCbMap.get(position));
                 }
             });
+
+//            holder.label.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    checkCheckBox(position, !mSelectedItemsIds.get(position));
+//                }
+//            });
+
+
         }
 
     }
@@ -97,12 +94,11 @@ public class DialogAdapter extends RecyclerView.Adapter<DialogAdapter.HoderView>
     @Override
     public int getItemCount() {
         return this.mDatas.size();
-        //return 10;
     }
 
     class HoderView extends RecyclerView.ViewHolder {
         TextView tvtip;
-        CheckBox cb;
+        CheckBox checkBox;
 
         public HoderView(View itemView) {
             super(itemView);
@@ -110,8 +106,82 @@ public class DialogAdapter extends RecyclerView.Adapter<DialogAdapter.HoderView>
         }
 
         private void initView(View itemView) {
-            cb = itemView.findViewById(R.id.dialog_item_cb);
+            checkBox = itemView.findViewById(R.id.dialog_item_cb);
             tvtip = itemView.findViewById(R.id.dialog_item_tv);
+
+        }
+    }
+
+
+    public void checkCheckBox(int position, boolean value) {
+        if (value) {
+            mCbMap.put(position, true);
+        } else {
+            mCbMap.delete(position);
+        }
+
+
+        notifyDataSetChanged();
+    }
+
+    /**
+     * 全选或则全部取消
+     */
+    public void selectOrCancelAll(boolean cancel) {
+
+        if (mDatas == null) {
+            return;
+        }
+        for (int i = 0; i < mDatas.size(); i++) {
+            if (cancel) {
+                checkCheckBox(i, false);
+
+            } else {
+                checkCheckBox(i, true);
+            }
+        }
+
+
+    }
+
+    /**
+     * 删除选中的item
+     */
+    public void removeSelect() {
+        if (mCbMap != null && mCbMap.size() > 0) {
+            //Loop to all the selected rows array
+            for (int i = (mCbMap.size() - 1); i >= 0; i--) {
+
+                //Check if selected rows have value i.e. checked item
+                if (mCbMap.valueAt(i)) {
+
+                    //remove the checked item
+                    mDatas.remove(mCbMap.keyAt(i));
+                }
+            }
+
+            mCbMap = new SparseBooleanArray();
+            notifyDataSetChanged();
+        }
+    }
+
+    public void getSelectPos(){
+
+        if (mCbMap != null && mCbMap.size() > 0) {
+
+
+            String pos="";
+            for (int i = 0; i < mCbMap.size(); i++) {
+
+                //Check if selected rows have value i.e. checked item
+                if (mCbMap.valueAt(i)) {
+                    pos=pos+i+",";
+                }
+            }
+
+            notifyDataSetChanged();
+            Log.e("mAdapter","select pos:"+pos);
+
 
         }
     }

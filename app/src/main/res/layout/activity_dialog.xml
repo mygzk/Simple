@@ -1,58 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/popup_window"
     android:orientation="vertical">
 
-    <LinearLayout
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
-        android:background="#123"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/tv_title_dialog"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:background="@null"
-            android:text="取消"
-            android:textColor="#fff"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="48dp">
+        android:layout_height="48dp"
+        android:text="show dialog"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:onClick="showdialog"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#123"/>
 
 
-            <Button
-                android:id="@+id/negativeBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="@null"
-                android:text="取消"
-                android:textColor="#fff" />
-
-            <Button
-                android:id="@+id/positiveBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="@null"
-                android:text="确定"
-                android:textColor="#fff" />
-        </LinearLayout>
+  <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="show showdialog1"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:onClick="showdialog1"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#123"/>
 
 
-    </LinearLayout>
 
-</FrameLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginEnd="20dp"-->
+        <!--android:layout_marginStart="20dp"-->
+        <!--android:background="#123"-->
+        <!--android:orientation="vertical">-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_title_dialog"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:background="@null"-->
+            <!--android:text="取消"-->
+            <!--android:textColor="#fff"-->
+            <!--/>-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48dp">-->
+
+
+            <!--<Button-->
+                <!--android:id="@+id/negativeBtn"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:background="@null"-->
+                <!--android:text="取消"-->
+                <!--android:textColor="#fff" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/positiveBtn"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:background="@null"-->
+                <!--android:text="确定"-->
+                <!--android:textColor="#fff" />-->
+        <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>

@@ -82,9 +82,7 @@ public class MainActivity extends BaseActivity {
 
     private void initDatas() {
         mDatas = new ArrayList<>();
-        mDatas.add(new MyBean("WheelActivity", WheelActivity.class));
-        mDatas.add(new MyBean("LinkActivity", LinkActivity.class));
-        mDatas.add(new MyBean("XuanfuActivity", XuanfuActivity.class));
+
         mDatas.add(new MyBean("ModifyStatusStytleActivity", ModifyStatusStytleActivity.class));
         mDatas.add(new MyBean("CheckPremissActivity", CheckPremissActivity.class));
         mDatas.add(new MyBean("PremissionTestActivity", PremissionTestActivity.class));
@@ -94,14 +92,11 @@ public class MainActivity extends BaseActivity {
       //  mDatas.add(new MyBean("DispatchTouchTestActivity", DispatchViewTestActivity.class));
         mDatas.add(new MyBean("ImgTestActivity", ImgTestActivity.class));
         mDatas.add(new MyBean("EvenBusTestActivity", EvenBusTestActivity.class));
-        mDatas.add(new MyBean("PressDemoActivity", PressDemoActivity.class));
         mDatas.add(new MyBean("QuestbankActivity", QuestbankActivity.class));
         mDatas.add(new MyBean("ScrollTabActivity", ScrollTabActivity.class));
         mDatas.add(new MyBean("CoordinatorSimpleActivity", CoordinatorSimpleActivity.class));
         mDatas.add(new MyBean("ViewPagerSimpleActivity", ViewPagerSimpleActivity.class));
-        mDatas.add(new MyBean("EditKeyBordActivity", EditKeyBordActivity.class));
         mDatas.add(new MyBean("RecyleViewTestActivity", RecyleViewTestActivity.class));
-        mDatas.add(new MyBean("LruCacheTestActivity", LruCacheTestActivity.class));
 
     }
 

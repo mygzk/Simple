@@ -101,4 +101,9 @@ public class CommTipFragmentDialog extends BaseDialogFragment {
         this.onCancleClickListenser = onCancleClickListenser;
     }
 
+
+    @Override
+    protected View getDialogView() {
+        return null;
+    }
 }

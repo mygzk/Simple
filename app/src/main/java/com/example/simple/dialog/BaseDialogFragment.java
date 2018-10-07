@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -17,11 +18,14 @@ import android.view.Window;
 import android.view.WindowManager;
 
 /**
+ * DialogFragment
  * Created by guozhk on 16-4-7.
  */
 public abstract class BaseDialogFragment extends DialogFragment implements View.OnClickListener {
-    private boolean mOnTouchOutCancel = true;
-    private boolean mOnBackCancel = true;
+    private String TAG = BaseDialogFragment.class.getSimpleName();
+
+    private static final float DEFAULT_DIMAMOUNT = 0.2F;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,41 +35,58 @@ public abstract class BaseDialogFragment extends DialogFragment implements View.
     @Override
     public void onStart() {
         super.onStart();
-        Dialog dialog = getDialog();
-        if (dialog != null) {
-            DisplayMetrics dm = new DisplayMetrics();
-            getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
-            //  dialog.getWindow().setLayout((int) (dm.widthPixels * 0.8), ViewGroup.LayoutParams.WRAP_CONTENT);
-            Window dialogWindow = dialog.getWindow();
-            WindowManager.LayoutParams lp = dialogWindow.getAttributes();
-            lp.width = (int) (dm.widthPixels * 0.8);
-            lp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
-            dialogWindow.setGravity(Gravity.CENTER);
-            dialogWindow.setAttributes(lp);
-            dialog.setCanceledOnTouchOutside(onTouchOutsideCancel());
-            if (!onBackCancel()) {
-                dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
-                    @Override
-                    public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
-                        if (keyCode == KeyEvent.KEYCODE_BACK) {
-                            return true;
-                        }
-                        return false;
-                    }
-                });
+        Window window = getDialog().getWindow();
+        if (window != null) {
+            //设置窗体背景色透明
+            window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            //设置宽高
+            WindowManager.LayoutParams layoutParams = window.getAttributes();
+            if (getDialogWidth() > 0) {
+                layoutParams.width = getDialogWidth();
+            } else {
+                layoutParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
             }
+            if (getDialogHeight() > 0) {
+                layoutParams.height = getDialogHeight();
+            } else {
+                layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
+            }
+            //透明度
+            layoutParams.dimAmount = getDimAmount();
+            //位置
+            layoutParams.gravity = getGravity();
+            window.setAttributes(layoutParams);
         }
     }
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Dialog dialog = getDialog();
         if (dialog != null) {
+            //去除标题
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            //设置窗体背景色透明
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+            dialog.setCanceledOnTouchOutside(isCancelableOutside());
+
+            dialog.getWindow().setWindowAnimations(getDialogAnimationRes());
         }
-        return inflater.inflate(doGetContentViewId(), container, false);
+        //return inflater.inflate(doGetContentViewId(), container, false);
+
+        View view = null;
+        if (doGetContentViewId() > 0) {
+            view = inflater.inflate(doGetContentViewId(), container, false);
+        }
+        if (getDialogView() != null) {
+            view = getDialogView();
+        }
+        //bindView(view);
+        return view;
+
+
     }
 
     @Override
@@ -74,9 +95,45 @@ public abstract class BaseDialogFragment extends DialogFragment implements View.
         initView(view);
     }
 
+
+    //默认弹窗位置为中心
+    public int getGravity() {
+        return Gravity.CENTER;
+    }
+
+    //默认宽高为包裹内容
+    public int getDialogHeight() {
+        return WindowManager.LayoutParams.WRAP_CONTENT;
+    }
+
+    public int getDialogWidth() {
+        return WindowManager.LayoutParams.WRAP_CONTENT;
+    }
+
+    //默认透明度为0.2
+    public float getDimAmount() {
+        return DEFAULT_DIMAMOUNT;
+    }
+
     public abstract int doGetContentViewId();
 
+
+    // protected abstract void bindView(View view);
+
+    protected abstract View getDialogView();
+
+
     public abstract void initView(View view);
+
+
+    public boolean isCancelableOutside() {
+        return false;
+    }
+
+    //获取弹窗显示动画,子类实现
+    protected int getDialogAnimationRes() {
+        return 0;
+    }
 
 
     public <T extends View> T queryViewById(View parentView, int viewId) {
@@ -98,26 +155,5 @@ public abstract class BaseDialogFragment extends DialogFragment implements View.
             views[i].setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
 
-    }
-
-    public void setOnTouchOutCancel(boolean mOnTouchOutCancel) {
-        this.mOnTouchOutCancel = mOnTouchOutCancel;
-    }
-
-    public void setOnBackCancel(boolean mOnBackCancel) {
-        this.mOnBackCancel = mOnBackCancel;
-    }
-
-    //触摸外部默认消失
-    public boolean onTouchOutsideCancel() {
-        return mOnTouchOutCancel;
-    }
-
-    //点击返回键消失
-    public boolean onBackCancel() {
-        return mOnBackCancel;
-    }
 }

@@ -29,6 +29,17 @@
         android:layout_marginTop="10dp"
         android:background="#123"/>
 
+<TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="show showdialog lsit"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:onClick="showdialogList"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#123"/>
+
 
 
 

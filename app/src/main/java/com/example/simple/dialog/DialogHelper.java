@@ -111,6 +111,11 @@ public class DialogHelper extends BaseDialogFragment {
 
     }
 
+
+    public void setDialogView(View mDialogView) {
+        this.mDialogView = mDialogView;
+    }
+
     public static class Builder {
 
         private int layoutResId;
@@ -131,7 +136,7 @@ public class DialogHelper extends BaseDialogFragment {
             return this;
         }
 
-        protected Builder dialogView(View view) {
+        public Builder dialogView(View view) {
             this.dialogView = view;
             return this;
         }

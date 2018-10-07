@@ -106,4 +106,10 @@ public class CommTipFragmentDialog extends BaseDialogFragment {
     protected View getDialogView() {
         return null;
     }
+
+
+    @Override
+    public void onClick(View v) {
+
+    }
 }

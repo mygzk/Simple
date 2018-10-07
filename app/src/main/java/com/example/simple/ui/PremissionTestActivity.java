@@ -80,9 +80,9 @@ public class PremissionTestActivity extends AppCompatActivity implements View.On
             // 如果用户已经拒绝劝降，那么提供额外的权限说明
           /*  Snackbar.make(mLayout, R.string.permission_camera_rationale,
                     Snackbar.LENGTH_INDEFINITE)
-                    .setAction(R.string.ok, new View.OnClickListener() {
+                    .setAction(R.string.ok, new DialogListView.OnClickListener() {
                         @Override
-                        public void onClick(View view) {
+                        public void onClick(DialogListView view) {
                             ActivityCompat.requestPermissions(PremissionTestActivity.this,
                                     new String[]{Manifest.permission.CAMERA},
                                     REQUEST_CAMERA);

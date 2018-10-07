@@ -30,9 +30,9 @@ public class DispatchTouchTestActivity extends AppCompatActivity {
 
     private void initView() {
         MyText myText = findViewById(R.id.dispath_tv) ;
-//        myText.setOnClickListener(new View.OnClickListener() {
+//        myText.setOnClickListener(new DialogListView.OnClickListener() {
 //            @Override
-//            public void onClick(View v) {
+//            public void onClick(DialogListView v) {
 //                Log.e(TAG, "myText view click ");
 //
 //            }

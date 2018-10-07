@@ -118,7 +118,7 @@ public abstract class BaseDialogFragment extends DialogFragment implements View.
     public abstract int doGetContentViewId();
 
 
-    // protected abstract void bindView(View view);
+    // protected abstract void bindView(DialogListView view);
 
     protected abstract View getDialogView();
 

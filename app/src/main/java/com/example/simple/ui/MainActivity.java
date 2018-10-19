@@ -76,8 +76,6 @@ public class MainActivity extends BaseActivity {
               return null;
           }
       }.execute();
-
-
     }
 
     private void initDatas() {

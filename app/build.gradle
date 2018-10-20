@@ -41,6 +41,9 @@ dependencies {
     compile rootProject.ext.dependencies["eventbus"]
     compile rootProject.ext.dependencies["cardview"]
 
+    //SmartRefreshLayout   目前在首页用
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'

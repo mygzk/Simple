@@ -8,12 +8,28 @@
     android:orientation="vertical"
     tools:context="com.example.simple.ui.ModifyStatusStytleActivity">
 
+
+    <com.example.simple.widget.BaseDragZoomImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        android:visibility="gone"
+        android:src="@drawable/page_guide_four_bg"/>
+
+    <com.example.simple.widget.ScaleView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/page_guide_four_bg"
+        />
+
     <TextView
         android:id="@+id/btn_test1"
         style="@style/comm_tv_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="btn1" />
+        android:text="btn1"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/btn_test2"
@@ -23,7 +39,8 @@
         android:background="#123"
         android:gravity="center"
         android:text="btn1"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/btn_test3"
@@ -33,6 +50,7 @@
         android:background="#123"
         android:gravity="center"
         android:text="btn3"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        android:visibility="gone" />
 
 </LinearLayout>

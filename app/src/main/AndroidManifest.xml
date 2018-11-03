@@ -62,7 +62,8 @@
             android:exported="true" />
 
         <activity android:name=".ui.rctest.RecyleViewTestActivity" />
-        <activity android:name=".model.smartrefreesh.SmartActivityActivity"></activity>
+        <activity android:name=".model.smartrefreesh.SmartActivityActivity" />
+        <activity android:name=".ui.looperviewpager.LooperViewpagerActivity"></activity>
     </application>
 
 </manifest>

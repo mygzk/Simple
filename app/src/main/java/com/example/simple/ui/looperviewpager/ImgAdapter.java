@@ -1,4 +1,4 @@
-package com.org.vptest.widgets;
+package com.example.simple.ui.looperviewpager;
 
 import android.content.Context;
 import android.graphics.Color;

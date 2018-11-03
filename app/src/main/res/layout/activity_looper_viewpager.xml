@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.org.vptest.MainActivity">
+    android:orientation="vertical">
 
 
     <android.support.v4.view.ViewPager
         android:id="@+id/test_vp"
-        android:background="#123"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp"
+        android:background="#123" />
 </LinearLayout>

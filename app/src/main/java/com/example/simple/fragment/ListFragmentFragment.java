@@ -17,7 +17,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.simple.R;
-import com.example.simple.ui.MainActivity;
 import com.example.simple.widget.scollerLayout.AbsListViewDelegate;
 import com.example.simple.widget.scollerLayout.ScrollableFragmentListener;
 import com.example.simple.widget.scollerLayout.ScrollableListener;

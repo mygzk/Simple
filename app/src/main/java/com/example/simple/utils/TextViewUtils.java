@@ -1,6 +1,5 @@
 package com.example.simple.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;

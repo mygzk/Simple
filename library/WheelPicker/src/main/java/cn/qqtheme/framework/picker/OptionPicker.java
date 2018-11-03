@@ -1,7 +1,6 @@
 package cn.qqtheme.framework.picker;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
@@ -81,7 +80,6 @@ public class OptionPicker extends WheelPicker {
     }
 
     @Override
-    @NonNull
     protected View makeCenterView() {
         if (options.size() == 0) {
             throw new IllegalArgumentException("please initial options at first, can't be empty");

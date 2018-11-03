@@ -6,13 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.simple.R;
 import com.example.simple.bean.QuestionBean;
 import com.example.simple.widget.TopicLayout;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

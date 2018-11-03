@@ -1,7 +1,6 @@
 package com.example.simple;
 
 import android.app.Application;
-import android.support.v4.util.LruCache;
 
 /**
  * Created by guozhk on 2017/12/4.

@@ -1,7 +1,6 @@
 package cn.qqtheme.framework.picker;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
@@ -97,7 +96,6 @@ public class LinkagePicker extends WheelPicker {
         this.onLinkageListener = onLinkageListener;
     }
 
-    @NonNull
     @Override
     protected View makeCenterView() {
         if (firstList.size() == 0 || secondList.size() == 0) {

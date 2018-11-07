@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".model.datepick.DatePickerTestActivity">
 
+    <TextView
+        android:id="@+id/date_pick_tv1"
+        style="@style/comm_tv_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="date_pick_tv"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/date_pick_tv2"
+        style="@style/comm_tv_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="time_pick_tv"
+        app:layout_constraintTop_toBottomOf="@+id/date_pick_tv1" />
 
 </android.support.constraint.ConstraintLayout>

@@ -16,7 +16,7 @@ import org.greenrobot.eventbus.ThreadMode;
  */
 
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
-    String TAG = getClass().getSimpleName();
+   public String TAG = getClass().getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

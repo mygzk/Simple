@@ -41,4 +41,5 @@
     <color name="form_font_corlor3">#999999</color>
     <!--输入框边线颜色-->
     <color name="input_line_bg">#c0c0c0</color>
+    <color name="color_282828">#282828</color>
 </resources>

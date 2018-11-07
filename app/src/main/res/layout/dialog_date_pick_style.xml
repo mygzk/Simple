@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:text="请选择"
+        android:textColor="@color/color_282828"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dialog_select_pic_style01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:background="#b8babd"
+        android:gravity="center"
+        android:minHeight="44dp"
+        android:text="style01"
+        android:textColor="@color/color_282828"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dialog_select_pic_style02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:background="#b8babd"
+        android:gravity="center"
+        android:minHeight="44dp"
+        android:text="style02"
+        android:textColor="@color/color_282828"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dialog_select_pic_style03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:background="#b8babd"
+        android:gravity="center"
+        android:minHeight="44dp"
+        android:text="style03"
+        android:textColor="@color/color_282828"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dialog_select_pic_style04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:background="#b8babd"
+        android:gravity="center"
+        android:minHeight="44dp"
+        android:text="style04"
+        android:textColor="@color/color_282828"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dialog_select_pic_style05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:background="#b8babd"
+        android:gravity="center"
+        android:minHeight="44dp"
+        android:text="style05"
+        android:textColor="@color/color_282828"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/dialog_select_pic_style06"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:background="#b8babd"
+        android:gravity="center"
+        android:minHeight="44dp"
+        android:text="style06"
+        android:textColor="@color/color_282828"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dialog_select_pic_style07"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:background="#b8babd"
+        android:gravity="center"
+        android:minHeight="44dp"
+        android:text="style07"
+        android:textColor="@color/color_282828"
+        android:textSize="14sp" />
+
+
+
+</LinearLayout>

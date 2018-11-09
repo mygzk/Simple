@@ -64,7 +64,13 @@
         <activity android:name=".ui.rctest.RecyleViewTestActivity" />
         <activity android:name=".model.smartrefreesh.SmartActivityActivity" />
         <activity android:name=".ui.looperviewpager.LooperViewpagerActivity" />
-        <activity android:name=".model.datepick.DatePickerTestActivity"></activity>
+        <activity android:name=".model.datepick.DatePickerTestActivity" />
+        <activity android:name=".photo.PhoneImgActivity" />
+        <activity
+            android:name=".photo.PhoneImgMainActivity"
+            android:label="@string/title_activity_phone_img_main"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".photo.PhotoViewpagerActivity"></activity>
     </application>
 
 </manifest>

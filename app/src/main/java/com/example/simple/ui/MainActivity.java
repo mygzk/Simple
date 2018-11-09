@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.simple.R;
 import com.example.simple.model.datepick.DatePickerTestActivity;
+import com.example.simple.photo.PhoneImgMainActivity;
 import com.example.simple.ui.Coordinator.CoordinatorSimpleActivity;
 import com.example.simple.ui.looperviewpager.LooperViewpagerActivity;
 import com.example.simple.ui.rctest.RecyleViewTestActivity;
@@ -93,6 +94,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("RecyleViewTestActivity", RecyleViewTestActivity.class));
         mDatas.add(new MyBean("LooperViewpagerActivity", LooperViewpagerActivity.class));
         mDatas.add(new MyBean("DatePickerTestActivity", DatePickerTestActivity.class));
+        mDatas.add(new MyBean("PhoneImgMainActivity", PhoneImgMainActivity.class));
 
     }
 

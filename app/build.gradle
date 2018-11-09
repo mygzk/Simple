@@ -53,7 +53,7 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
 
     implementation rootProject.ext.dependencies["greendao"]
-   // implementation 'net.zetetic:android-database-sqlcipher:3.5.7@aar'//加密
+    // implementation 'net.zetetic:android-database-sqlcipher:3.5.7@aar'//加密
     implementation 'net.zetetic:android-database-sqlcipher:3.5.7'
 
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'

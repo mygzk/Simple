@@ -71,7 +71,8 @@
             android:label="@string/title_activity_phone_img_main"
             android:theme="@style/AppTheme" />
         <activity android:name=".photo.PhotoViewpagerActivity" />
-        <activity android:name=".ui.NotifyMsgActivity"></activity>
+        <activity android:name=".ui.NotifyMsgActivity" />
+        <activity android:name=".ui.TabLayoutTestActivity"></activity>
     </application>
 
 </manifest>

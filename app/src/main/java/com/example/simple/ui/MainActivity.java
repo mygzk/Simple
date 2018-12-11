@@ -96,6 +96,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("DatePickerTestActivity", DatePickerTestActivity.class));
         mDatas.add(new MyBean("PhoneImgMainActivity", PhoneImgMainActivity.class));
         mDatas.add(new MyBean("NotifyMsgActivity", NotifyMsgActivity.class));
+        mDatas.add(new MyBean("TabLayoutTestActivity", TabLayoutTestActivity.class));
 
     }
 

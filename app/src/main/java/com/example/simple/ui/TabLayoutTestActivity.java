@@ -3,14 +3,17 @@ package com.example.simple.ui;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.simple.R;
+import com.example.simple.model.adress.AdressBean;
+import com.example.simple.model.adress.AdressView;
 
-public class TabLayoutTestActivity extends Activity {
+public class TabLayoutTestActivity extends FragmentActivity {
     private String TAG = TabLayoutTestActivity.class.getSimpleName();
     private TabLayout tabLayout;
 
@@ -23,6 +26,15 @@ public class TabLayoutTestActivity extends Activity {
     }
 
     private void initView() {
+
+        findViewById(R.id.select_adress).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                adressDiolog();
+            }
+        });
+
+
         tabLayout = findViewById(R.id.tab_layout);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -55,6 +67,31 @@ public class TabLayoutTestActivity extends Activity {
             tabLayout.addTab(tab);
         }
 
+    }
 
+
+    private void adressDiolog() {
+        AdressView adressView = new AdressView(this);
+        adressView.setHasAllCountry(false);
+        adressView.initData();
+        adressView.showDialog(getSupportFragmentManager(), new AdressView.IAdressCallback() {
+            @Override
+            public void result(AdressBean provinceBean, AdressBean cityBean, AdressBean areaBean) {
+
+                String adress = "";
+                if (provinceBean != null) {
+                    adress = adress + provinceBean.getAreaName();
+                }
+                if (cityBean != null) {
+                    adress = adress + cityBean.getAreaName();
+                }
+                if (areaBean != null) {
+                    adress = adress + areaBean.getAreaName();
+                }
+
+                Log.e("adress", "adrss:" + adress);
+
+            }
+        });
     }
 }

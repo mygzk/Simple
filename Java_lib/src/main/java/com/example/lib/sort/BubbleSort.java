@@ -20,4 +20,10 @@ public class BubbleSort implements ISort {
         }
 
     }
+
+
+    @Override
+    public void printArry(int[] data) {
+
+    }
 }

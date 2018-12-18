@@ -34,7 +34,8 @@ public class InsertSort implements ISort{
 
 
 
-    private static void printArry(int[] data){
+    @Override
+    public void printArry(int[] data){
         if(data==null){
             return;
         }

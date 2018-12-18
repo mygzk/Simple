@@ -7,4 +7,7 @@ package com.example.lib.sort;
 public interface ISort {
 
     void sortData(int[] data);
+
+
+    void printArry(int[] data);
 }

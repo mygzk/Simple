@@ -97,6 +97,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("PhoneImgMainActivity", PhoneImgMainActivity.class));
         mDatas.add(new MyBean("NotifyMsgActivity", NotifyMsgActivity.class));
         mDatas.add(new MyBean("TabLayoutTestActivity", TabLayoutTestActivity.class));
+        mDatas.add(new MyBean("ServiceTestActivity", ServiceTestActivity.class));
 
     }
 

@@ -1,12 +1,10 @@
-package com.example.simple.model.upload;
+package com.example.simple.model.fileselect;
 
 import android.os.Environment;
 import android.text.TextUtils;
-import android.util.Log;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

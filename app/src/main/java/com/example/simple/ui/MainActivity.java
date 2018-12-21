@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.example.simple.R;
 import com.example.simple.model.datepick.DatePickerTestActivity;
-import com.example.simple.model.upload.SelectFileActivity;
+import com.example.simple.model.fileselect.SelectFileActivity;
 import com.example.simple.photo.PhoneImgMainActivity;
 import com.example.simple.ui.Coordinator.CoordinatorSimpleActivity;
 import com.example.simple.ui.looperviewpager.LooperViewpagerActivity;

@@ -74,7 +74,7 @@
         <activity android:name=".ui.NotifyMsgActivity" />
         <activity android:name=".ui.TabLayoutTestActivity" />
         <activity android:name=".ui.ServiceTestActivity" />
-        <activity android:name=".model.upload.SelectFileActivity"></activity>
+        <activity android:name=".model.fileselect.SelectFileActivity"></activity>
     </application>
 
 </manifest>

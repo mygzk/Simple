@@ -41,7 +41,7 @@ public class SelectFileActivity extends BaseActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rcFiles.setLayoutManager(linearLayoutManager);
-        mAdater = new FileAdapter(new ArrayList<FileBean>());
+        mAdater = new FileAdapter(this,new ArrayList<FileBean>());
         mAdater.setItemClick(new FileAdapter.OnItemClick() {
             @Override
             public void onItemClick(int pos) {

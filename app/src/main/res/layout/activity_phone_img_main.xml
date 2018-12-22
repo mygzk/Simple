@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".photo.PhoneImgMainActivity">
+    tools:context=".model.photo.PhoneImgMainActivity">
 
     <TextView
         android:id="@+id/photo_main1"

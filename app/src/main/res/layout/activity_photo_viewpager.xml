@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".photo.PhotoViewpagerActivity">
+    tools:context=".model.photo.PhotoViewpagerActivity">
     <android.support.v4.view.ViewPager
         android:id="@+id/photo_vp"
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.example.simple.prermission;
+package com.example.simple.model.prermission;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;

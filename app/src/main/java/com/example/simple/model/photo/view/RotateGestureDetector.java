@@ -1,4 +1,4 @@
-package com.example.simple.photo.view;
+package com.example.simple.model.photo.view;
 import android.view.MotionEvent;
 
 /**

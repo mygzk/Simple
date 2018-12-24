@@ -1,4 +1,4 @@
-package com.example.lib.node;
+package com.example.lib.linknode;
 
 /**
  * Created by guozhk on 2018/12/18.
@@ -133,7 +133,7 @@ public class NodeUtil {
                 current = current.next;
                 node2 = node2.next;
             }
-           // System.out.println("while -->node1:"+node1.data+  "  node2:"+node2.data);
+            // System.out.println("while -->node1:"+node1.data+  "  node2:"+node2.data);
         }
 
 
@@ -147,18 +147,22 @@ public class NodeUtil {
         }
 
 
-
         return head;
     }
 
 
-
-    private Node reversetNode(Node node){
-        if(node==null){
+    /**
+     * 单链表反转
+     *
+     * @param node node
+     * @return node
+     */
+    private Node reversetNode(Node node) {
+        if (node == null) {
             return null;
         }
 
-        if(node.next==null){
+        if (node.next == null) {
             return node;
         }
 
@@ -180,17 +184,17 @@ public class NodeUtil {
     }
 
 
-
-
-
+    /**
+     * 打印节点
+     *
+     * @param node node
+     */
     public void printNode(Node node) {
-
-
         if (node == null) {
             return;
         }
         System.out.print("node :");
-        Node  current = node;
+        Node current = node;
         while (current != null) {
             System.out.print(current.data + " ");
             current = current.next;

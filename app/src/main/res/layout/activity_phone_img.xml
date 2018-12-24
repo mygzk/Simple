@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".photo.PhoneImgActivity">
+    tools:context=".model.photo.PhoneImgActivity">
 
-    <com.example.simple.photo.view.PhotoView
+    <com.example.simple.model.photo.view.PhotoView
         android:id="@+id/phoneview_0"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

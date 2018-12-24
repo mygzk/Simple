@@ -1,8 +1,8 @@
-package com.example.simple.photo;
+package com.example.simple.model.photo;
 
 import com.bumptech.glide.Glide;
 import com.example.simple.R;
-import com.example.simple.photo.view.PhotoView;
+import com.example.simple.model.photo.view.PhotoView;
 import com.example.simple.ui.BaseActivity;
 
 /**

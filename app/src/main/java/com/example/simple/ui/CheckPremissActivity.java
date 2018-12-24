@@ -1,6 +1,5 @@
 package com.example.simple.ui;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -8,9 +7,9 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.simple.R;
-import com.example.simple.prermission.PermissionConstant;
-import com.example.simple.prermission.PermissionsChecker;
-import com.example.simple.prermission.PermissionsHelper;
+import com.example.simple.model.prermission.PermissionConstant;
+import com.example.simple.model.prermission.PermissionsChecker;
+import com.example.simple.model.prermission.PermissionsHelper;
 
 public class CheckPremissActivity extends AppCompatActivity implements View.OnClickListener {
     // 权限检测器

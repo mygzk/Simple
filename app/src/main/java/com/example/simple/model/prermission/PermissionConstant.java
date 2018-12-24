@@ -1,4 +1,4 @@
-package com.example.simple.prermission;
+package com.example.simple.model.prermission;
 
 import android.Manifest;
 import android.support.annotation.NonNull;

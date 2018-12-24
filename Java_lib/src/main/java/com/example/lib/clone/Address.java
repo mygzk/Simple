@@ -1,4 +1,4 @@
-package com.example.lib.clone;
+package  com.example.lib.clone;
 
 /**
  * Created by guozhk on 2018/5/29.

@@ -1,4 +1,4 @@
-package com.example.simple.photo;
+package com.example.simple.model.photo;
 
 import android.content.Intent;
 import android.view.View;

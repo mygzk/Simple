@@ -2,6 +2,7 @@ package com.example.simple;
 
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Handler;
 import android.util.Log;
 
 import com.example.simple.db.dao.DaoMaster;
@@ -37,6 +38,9 @@ public class MyApp extends Application {
         // Database db = helper.getEncryptedWritableDb("encryption-key");
 
         DaoSession daoSession = new DaoMaster(db).newSession();
+
+
+        Handler handler;
 
     }
 

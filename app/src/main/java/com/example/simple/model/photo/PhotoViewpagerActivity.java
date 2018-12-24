@@ -1,4 +1,4 @@
-package com.example.simple.photo;
+package com.example.simple.model.photo;
 
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.simple.R;
-import com.example.simple.photo.view.PhotoView;
+import com.example.simple.model.photo.view.PhotoView;
 import com.example.simple.ui.BaseActivity;
 
 /**

@@ -36,4 +36,10 @@ public class ShellSort implements ISort{
         }
 
     }
+
+
+    @Override
+    public void printArry(int[] data) {
+
+    }
 }

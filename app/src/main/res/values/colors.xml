@@ -42,4 +42,6 @@
     <!--输入框边线颜色-->
     <color name="input_line_bg">#c0c0c0</color>
     <color name="color_282828">#282828</color>
+    <color name="app_theme_color_bg_all">#F1F1F1</color>
+    <color name="smooth_text_cololr">#e27013</color>
 </resources>

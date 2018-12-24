@@ -1,4 +1,4 @@
-package com.example.lib.node;
+package com.example.lib.linknode;
 
 /**
  * Created by guozhk on 2018/12/18.

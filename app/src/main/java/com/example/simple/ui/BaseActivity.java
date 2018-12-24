@@ -16,7 +16,8 @@ import org.greenrobot.eventbus.ThreadMode;
  */
 
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
-   public String TAG = getClass().getSimpleName();
+    public String TAG = getClass().getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     protected abstract int getLayoutId();
 
-    protected abstract void  initView();
+    protected abstract void initView();
 
 
     @Override
@@ -73,7 +74,14 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Subscribe
     public void onEvenMessage5(TestMessEven even) {
         long threadId = Thread.currentThread().getId();
-        Log.e(TAG, "0 baseactivity threadId:" + threadId );
+        Log.e(TAG, "0 baseactivity threadId:" + threadId);
+
+    }
+
+
+    private void getInfo() {
+        return;
+
 
     }
 }

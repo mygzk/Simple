@@ -15,18 +15,19 @@ public class NodeTest {
         NodeTest nodeTest = new NodeTest();
         nodeTest.initNode();
 
-        nodeTest.getNodeLength();
-        nodeTest.getCounDonwNode(1);
+        //  nodeTest.getNodeLength();
+        //  nodeTest.getCounDonwNode(1);
 //        nodeTest.getCounDonwNode(2);
 //        nodeTest.getCounDonwNode(0);
 //        nodeTest.getCounDonwNode(11);
 //        nodeTest.getCounDonwNode(12);
 //        nodeTest.getCounDonwNode(-1);
-        nodeTest.getModdleNode();
+        //  nodeTest.getModdleNode();
 
-        nodeTest.mergerNode();
+        //   nodeTest.mergerNode();
+        // nodeTest.reverseNode();
 
-
+        nodeTest.mNodeUtils.printeReserveNode(nodeTest.mLinkListTest.head);
     }
 
 
@@ -70,6 +71,9 @@ public class NodeTest {
     }
 
 
+    /**
+     * 合并两个有序单链表
+     */
     private void mergerNode() {
         LinkListTest mLinkListTest1 = new LinkListTest();
 
@@ -88,6 +92,21 @@ public class NodeTest {
             mLinkListTest1.print(node);
         } else {
             print("mergerNode is null");
+        }
+
+    }
+
+
+    private void reverseNode() {
+        Node node = mNodeUtils.reversetNode(mLinkListTest.head);
+
+        if (node != null) {
+            print("reverseNode ：" + node.data);
+
+            mNodeUtils.printNode(node);
+
+        } else {
+            print("reverseNode is null");
         }
 
     }

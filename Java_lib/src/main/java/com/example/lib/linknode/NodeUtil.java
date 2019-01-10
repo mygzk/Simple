@@ -1,6 +1,9 @@
 package com.example.lib.linknode;
 
+import java.util.Stack;
+
 /**
+ * https://www.cnblogs.com/smyhvae/p/4782595.html
  * Created by guozhk on 2018/12/18.
  */
 
@@ -157,7 +160,7 @@ public class NodeUtil {
      * @param node node
      * @return node
      */
-    private Node reversetNode(Node node) {
+    public Node reversetNode(Node node) {
         if (node == null) {
             return null;
         }
@@ -181,6 +184,124 @@ public class NodeUtil {
         }
 
         return reverseHead;
+    }
+
+
+    /**
+     * 从尾部 -->到头部打印 node
+     *
+     * @param node node
+     */
+    public void printeReserveNode(Node node) {
+        if (node == null) {
+            return;
+        }
+
+
+        Stack<Node> stack = new Stack<>();
+        while (node != null) {
+            stack.push(node);
+            node = node.next;
+        }
+
+        System.out.println("------打印  start------");
+        while (stack.size() > 0) {
+            System.out.print(stack.pop().data);
+        }
+        System.out.println("------打印 end ------");
+    }
+
+
+    /**
+     * 是否有环
+     * 这里也是用到两个指针，如果一个链表有环，那么用一个指针去遍历，是永远走不到头的。
+     * <p>
+     * 因此，我们用两个指针去遍历：first指针每次走一步，second指针每次走两步，如果first指针和second指针相遇，说明有环。时间复杂度为O (n)。
+     *
+     * @param node node
+     * @return boolean
+     */
+    public boolean hasCycle(Node node) {
+
+        if (node == null) {
+            return false;
+        }
+
+        Node first = node;
+        Node second = node;
+        while (second != null) {
+            first = first.next;
+            second = second.next;
+            if (second != null) {
+                second = second.next;
+                if (first == second) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * 获取环节点node
+     *
+     * @return node
+     */
+    public Node getCycleNode(Node node) {
+        if (node == null) {
+            return null;
+        }
+
+        Node first = node;
+        Node second = node;
+        while (second != null) {
+            first = first.next;
+            second = second.next;
+            if (second != null) {
+                second = second.next;
+                if (first == second) {
+                    return second;
+                }
+            }
+        }
+
+        return null;
+    }
+
+
+    /**
+     * 获取环长度
+     *
+     * @param node node
+     * @return int
+     */
+    public int getCycleLength(Node node) {
+
+        if (node == null) {
+            return 0;
+        }
+
+
+        Node cylcle = getCycleNode(node);
+        if (cylcle == null) {
+            return 0;
+        }
+
+        int length = 0;
+        Node current = cylcle;
+
+        while (current != null) {
+            current = current.next;
+            length++;
+
+            if (current == cylcle) {
+                return length;
+            }
+        }
+
+
+        return 0;
     }
 
 

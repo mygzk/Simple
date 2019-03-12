@@ -15,6 +15,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.simple.R;
+import com.example.simple.model.cehua.CehuaListviewActivity;
 import com.example.simple.model.datepick.DatePickerTestActivity;
 import com.example.simple.model.fileselect.SelectFileActivity;
 import com.example.simple.model.photo.PhoneImgMainActivity;
@@ -100,6 +101,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("TabLayoutTestActivity", TabLayoutTestActivity.class));
         mDatas.add(new MyBean("ServiceTestActivity", ServiceTestActivity.class));
         mDatas.add(new MyBean("SelectFileActivity", SelectFileActivity.class));
+        mDatas.add(new MyBean("CehuaListviewActivity", CehuaListviewActivity.class));
 
     }
 

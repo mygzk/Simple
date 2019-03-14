@@ -99,7 +99,7 @@ public class CehuaAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 holder.itemRoot.closeMenu();
-
+                holder.itemRoot.setCanSwip(false);
                 Toast.makeText(mContext, "点击item ", Toast.LENGTH_SHORT).show();
             }
         });
@@ -108,7 +108,7 @@ public class CehuaAdapter extends BaseAdapter {
             @Override
             public boolean onLongClick(View view) {
                 holder.itemRoot.closeMenu();
-
+                holder.itemRoot.setCanSwip(true);
                 Toast.makeText(mContext, "长按 item ", Toast.LENGTH_SHORT).show();
                 return false;
             }

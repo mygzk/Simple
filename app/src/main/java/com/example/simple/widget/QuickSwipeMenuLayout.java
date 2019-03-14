@@ -43,6 +43,9 @@ public class QuickSwipeMenuLayout extends FrameLayout {
     private ScrollerCompat mScroller;
     private static QuickSwipeMenuLayout sOpenQuickSwipeMenuLayout;
 
+    //是否可以 侧滑
+    private boolean mCanSwip = true;
+
     public QuickSwipeMenuLayout(Context context) {
         super(context);
     }
@@ -58,8 +61,7 @@ public class QuickSwipeMenuLayout extends FrameLayout {
     }
 
 
-
-    private void initAttrs(AttributeSet attrs){
+    private void initAttrs(AttributeSet attrs) {
         mScroller = ScrollerCompat.create(getContext());
         ViewConfiguration config = ViewConfiguration.get(getContext());
         mTouchSlop = config.getScaledTouchSlop();
@@ -76,30 +78,30 @@ public class QuickSwipeMenuLayout extends FrameLayout {
 
     public void initView() {
 
-        if(mMenuLeftView == null && mIdMenuLeft != View.NO_ID) {
+        if (mMenuLeftView == null && mIdMenuLeft != View.NO_ID) {
             mMenuLeftView = this.findViewById(mIdMenuLeft);
 
             FrameLayout.LayoutParams layoutParams = (LayoutParams) mMenuLeftView.getLayoutParams();
             layoutParams.gravity = Gravity.START;
         }
 
-        if(mMenuRightView == null && mIdMenuRight != View.NO_ID) {
+        if (mMenuRightView == null && mIdMenuRight != View.NO_ID) {
             mMenuRightView = this.findViewById(mIdMenuRight);
 
             FrameLayout.LayoutParams layoutParams = (LayoutParams) mMenuRightView.getLayoutParams();
             layoutParams.gravity = Gravity.END;
         }
 
-        if(mContextView == null && mIdContext != View.NO_ID) {
+        if (mContextView == null && mIdContext != View.NO_ID) {
             mContextView = this.findViewById(mIdContext);
             this.bringChildToFront(mContextView);
         }
 
-        if(mMenuLeftView != null){
+        if (mMenuLeftView != null) {
             mLeftMargin = mMenuLeftView.getMeasuredWidth();
         }
 
-        if(mMenuRightView != null){
+        if (mMenuRightView != null) {
             mRightMargin = mMenuRightView.getMeasuredWidth();
         }
     }
@@ -111,15 +113,18 @@ public class QuickSwipeMenuLayout extends FrameLayout {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent event) {
-        switch(event.getAction()) {
+        if (!mCanSwip) {
+            return super.onInterceptTouchEvent(event);
+        }
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 mDownX = event.getX();
-                if(mContextView != null) {
+                if (mContextView != null) {
                     mInitLeft = mContextView.getLeft();
                 }
 
-                if(mInitLeft > 0 && mInitLeft == mLeftMargin){
-                    if(mMenuRightView != null) {
+                if (mInitLeft > 0 && mInitLeft == mLeftMargin) {
+                    if (mMenuRightView != null) {
                         RectF rectLeft = getViewScreenCoordinate(mMenuRightView);
                         if (rectLeft.contains(event.getRawX(), event.getRawY())) {
                             return true;
@@ -127,8 +132,8 @@ public class QuickSwipeMenuLayout extends FrameLayout {
                     }
 
                     return super.onInterceptTouchEvent(event);
-                } else if( mInitLeft < 0 && mInitLeft == -mRightMargin){
-                    if(mMenuLeftView != null) {
+                } else if (mInitLeft < 0 && mInitLeft == -mRightMargin) {
+                    if (mMenuLeftView != null) {
                         RectF rectRight = getViewScreenCoordinate(mMenuLeftView);
                         if (rectRight.contains(event.getRawX(), event.getRawY())) {
                             return true;
@@ -150,15 +155,15 @@ public class QuickSwipeMenuLayout extends FrameLayout {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        switch(event.getAction()){
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
 
-                if(sOpenQuickSwipeMenuLayout != null && sOpenQuickSwipeMenuLayout != this){
+                if (sOpenQuickSwipeMenuLayout != null && sOpenQuickSwipeMenuLayout != this) {
                     sOpenQuickSwipeMenuLayout.closeMenu();
                     sOpenQuickSwipeMenuLayout = this;
                 }
 
-                if(sOpenQuickSwipeMenuLayout == null){
+                if (sOpenQuickSwipeMenuLayout == null) {
                     sOpenQuickSwipeMenuLayout = this;
                 }
 
@@ -166,12 +171,12 @@ public class QuickSwipeMenuLayout extends FrameLayout {
                 return true;
             case MotionEvent.ACTION_MOVE:
                 int dx = (int) (event.getX() - mDownX);
-                if(Math.abs(dx) < mTouchSlop){
+                if (Math.abs(dx) < mTouchSlop) {
                     break;
                 }
 
                 int layoutX = dx + mInitLeft;
-                if(dx > 0){
+                if (dx > 0) {
                     layoutX -= mTouchSlop;
                 } else {
                     layoutX += mTouchSlop;
@@ -179,10 +184,10 @@ public class QuickSwipeMenuLayout extends FrameLayout {
 
                 getParent().requestDisallowInterceptTouchEvent(true);
 
-                if(layoutX > 0 && mMenuLeftView == null) break;
-                if(layoutX < 0 && mMenuRightView == null) break;
+                if (layoutX > 0 && mMenuLeftView == null) break;
+                if (layoutX < 0 && mMenuRightView == null) break;
 
-                if(layoutX > 0 && layoutX > mLeftMargin) {
+                if (layoutX > 0 && layoutX > mLeftMargin) {
                     layoutX = mLeftMargin;
                 } else if (layoutX < 0 && layoutX < -mRightMargin) {
                     layoutX = -mRightMargin;
@@ -198,21 +203,21 @@ public class QuickSwipeMenuLayout extends FrameLayout {
                    dis > 0, move to right, dis < mLeftMargin/2, close menu, dis < mLeftMargin open menu.
                    dis < 0, move to left, dis > -mRightMargin/2, close menu, dis > -mRightMargin, open menu
                  */
-                if(dis > 0 && mMenuLeftView != null) {
+                if (dis > 0 && mMenuLeftView != null) {
 
-                    if(dis < mLeftMargin/2) {
+                    if (dis < mLeftMargin / 2) {
                         mScroller.startScroll(dis, 0, -dis, 0, mScrollTime);
-                    } else if(dis < mLeftMargin) {
-                        mScroller.startScroll(dis, 0, mLeftMargin-dis, 0, mScrollTime);
+                    } else if (dis < mLeftMargin) {
+                        mScroller.startScroll(dis, 0, mLeftMargin - dis, 0, mScrollTime);
                     }
 
                     postInvalidate();
-                } else if(dis < 0 && mMenuRightView != null) {
+                } else if (dis < 0 && mMenuRightView != null) {
 
-                    if(dis > -mRightMargin/2) {
+                    if (dis > -mRightMargin / 2) {
                         mScroller.startScroll(dis, 0, -dis, 0, mScrollTime);  //close
-                    } else if(dis > -mRightMargin) {
-                        mScroller.startScroll(dis, 0, -mRightMargin-dis, 0, mScrollTime);
+                    } else if (dis > -mRightMargin) {
+                        mScroller.startScroll(dis, 0, -mRightMargin - dis, 0, mScrollTime);
                     }
 
                     postInvalidate();
@@ -237,33 +242,33 @@ public class QuickSwipeMenuLayout extends FrameLayout {
     public void computeScroll() {
         super.computeScroll();
 
-        if(mScroller.computeScrollOffset()) {
+        if (mScroller.computeScrollOffset()) {
             layoutContextView(mScroller.getCurrX());
             postInvalidate();
         }
     }
 
-    private void setEnableTouchEvent(View view, boolean enable){
-        if(view != null) {
+    private void setEnableTouchEvent(View view, boolean enable) {
+        if (view != null) {
             view.setEnabled(enable);
             view.setClickable(enable);
             view.setLongClickable(enable);
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 view.setContextClickable(enable);   // api require >= 23
             }
         }
     }
 
     private void layoutContextView(int dx) {
-        if(mContextView != null) {
+        if (mContextView != null) {
             mContextView.layout(dx, 0, mContextView.getMeasuredWidth() + dx, mContextView.getMeasuredHeight());
         }
     }
 
-    public void closeMenu(){
-        if(mContextView != null ){
+    public void closeMenu() {
+        if (mContextView != null) {
 
-            if(mScroller.computeScrollOffset()){
+            if (mScroller.computeScrollOffset()) {
                 mScroller.abortAnimation();
             }
 
@@ -290,8 +295,20 @@ public class QuickSwipeMenuLayout extends FrameLayout {
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        if(sOpenQuickSwipeMenuLayout != null){
+        if (sOpenQuickSwipeMenuLayout != null) {
             sOpenQuickSwipeMenuLayout = null;
         }
     }
+
+
+    /**
+     * 设置是否可以侧滑
+     *
+     * @param canSwip canswip
+     */
+    public void setCanSwip(boolean canSwip) {
+        this.mCanSwip = canSwip;
+    }
+
+
 }

@@ -2,6 +2,8 @@ apply plugin: 'java-library'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.alibaba:fastjson:1.1.70.android'
 }
 
 sourceCompatibility = rootProject.ext.dependVersion["javaVersion"]

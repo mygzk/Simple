@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".model.pgy.PypCheckUpdateActivity">
+
+    <TextView
+        android:id="@+id/pypChekUpdate"
+        style="@style/comm_tv_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pypChekUpdate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dialog"
+        style="@style/comm_tv_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="弹窗"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/down"
+        style="@style/comm_tv_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="comm down"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>

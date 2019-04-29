@@ -11,7 +11,7 @@ public class myClass {
 static     int[] array = {3,1,5,7,2,4,9,6,10,8};
     public static void main(String[] args) {
 
-        String s ="";
+        String s ="333";
         String s1 ="                 ";
 
 

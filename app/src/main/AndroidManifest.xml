@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.simple">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -20,6 +21,15 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
 
     <application
         android:name=".MyApp"
@@ -27,8 +37,30 @@
         android:icon="@mipmap/icon_app_2"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".model.cehua.CehuaListviewActivity"></activity>
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".model.pgy.PypCheckUpdateActivity"></activity>
+        <!-- 蒲公英 apiKey -->
+        <!--
+ <meta-data
+             android:name="PGYER_API_KEY"
+             android:value="d03390c7201e0692e17fcc6d955e6a68" />
+         &lt;!&ndash; 蒲公英 appKey &ndash;&gt;
+         <meta-data
+             android:name="PGYER_APP_KEY"
+             android:value="d03390c7201e0692e17fcc6d955e6a68" />
+        -->
+        <!-- Jar 包集成的方式 必填 -->
+        <provider
+            android:name="com.pgyersdk.PgyerProvider"
+            android:authorities="${applicationId}.com.pgyer.provider"
+            android:exported="false" />
+
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="d03390c7201e0692e17fcc6d955e6a68c" />
+
+        <activity android:name=".model.cehua.CehuaListviewActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -76,6 +108,21 @@
         <activity android:name=".ui.TabLayoutTestActivity" />
         <activity android:name=".ui.ServiceTestActivity" />
         <activity android:name=".model.fileselect.SelectFileActivity" />
+        <activity android:name=".model.createimg.CreateImgActivity" />
+
+
+
+        <!-- 解决android N不能安装apk -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.simple.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
     </application>
 
 </manifest>

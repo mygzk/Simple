@@ -19,13 +19,13 @@
             android:layout_width="match_parent"
             android:layout_height="171dp"
             android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/ss1"
             app:contentScrim="#0c6ccc"
-            app:expandedTitleMarginBottom="50dp"
             app:expandedTitleGravity="center_horizontal|bottom"
+            app:expandedTitleMarginBottom="50dp"
             app:expandedTitleMarginEnd="0dp"
             app:expandedTitleMarginStart="0dp"
             app:expandedTitleTextAppearance="@style/ss"
-            app:collapsedTitleTextAppearance="@style/ss1"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
             <!--app:collapsedTitleGravity="center_horizontal"-->
@@ -44,10 +44,12 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
+                android:paddingLeft="-10dp"
                 app:contentInsetLeft="0dp"
                 app:contentInsetStart="0dp"
-
+                app:titleMarginStart="-10dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="pin"
                 app:navigationIcon="@mipmap/back"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 

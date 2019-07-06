@@ -1,13 +1,11 @@
-package com.example.simple.ui;
+package com.example.simple.model.tablayout;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
 
 import com.example.simple.R;
 import com.example.simple.model.adress.AdressBean;

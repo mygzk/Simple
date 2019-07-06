@@ -18,6 +18,8 @@ import com.example.simple.R;
 import com.example.simple.model.datepick.DatePickerTestActivity;
 import com.example.simple.model.fileselect.SelectFileActivity;
 import com.example.simple.model.photo.PhoneImgMainActivity;
+import com.example.simple.model.tablayout.TabLayoutTest1Activity;
+import com.example.simple.model.tablayout.TabLayoutTestActivity;
 import com.example.simple.ui.Coordinator.CoordinatorSimpleActivity;
 import com.example.simple.ui.looperviewpager.LooperViewpagerActivity;
 import com.example.simple.ui.rctest.RecyleViewTestActivity;
@@ -98,8 +100,10 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("PhoneImgMainActivity", PhoneImgMainActivity.class));
         mDatas.add(new MyBean("NotifyMsgActivity", NotifyMsgActivity.class));
         mDatas.add(new MyBean("TabLayoutTestActivity", TabLayoutTestActivity.class));
+        mDatas.add(new MyBean("TabLayoutTest1Activity", TabLayoutTest1Activity.class));
         mDatas.add(new MyBean("ServiceTestActivity", ServiceTestActivity.class));
         mDatas.add(new MyBean("SelectFileActivity", SelectFileActivity.class));
+        mDatas.add(new MyBean("PickerTimeTestActivity", PickerTimeTestActivity.class));
 
     }
 

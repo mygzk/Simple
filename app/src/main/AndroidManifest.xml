@@ -72,9 +72,11 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".model.photo.PhotoViewpagerActivity" />
         <activity android:name=".ui.NotifyMsgActivity" />
-        <activity android:name=".ui.TabLayoutTestActivity" />
+        <activity android:name=".model.tablayout.TabLayoutTestActivity" />
+        <activity android:name=".model.tablayout.TabLayoutTest1Activity" />
         <activity android:name=".ui.ServiceTestActivity" />
-        <activity android:name=".model.fileselect.SelectFileActivity"></activity>
+        <activity android:name=".model.fileselect.SelectFileActivity" />
+        <activity android:name=".ui.PickerTimeTestActivity"></activity>
     </application>
 
 </manifest>

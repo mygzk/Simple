@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.simple.widget.QuickSwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/root_id"
+    app:swipe_context_id="@+id/swipe_context"
+    app:swipe_menu_right_id="@+id/swipe_right_menu"
+    app:swipe_scroll_duration="500">
+    <!--    app:swipe_menu_left_id="@+id/swipe_left_menu"-->
+
+    <!--  <ImageView
+          android:id="@+id/swipe_left_menu"
+          android:layout_width="80dp"
+          android:layout_height="80dp"
+          android:background="@color/colorAccent" />-->
+
+    <LinearLayout
+        android:id="@+id/swipe_right_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/swipe_right_1"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="#123"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:text="删除"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/swipe_right_2"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="#456"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:text="置顶"
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/swipe_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minHeight="80dp"
+        android:padding="8dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:text="name"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</com.example.simple.widget.QuickSwipeMenuLayout>

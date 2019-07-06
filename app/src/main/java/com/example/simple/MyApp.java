@@ -7,6 +7,9 @@ import android.util.Log;
 
 import com.example.simple.db.dao.DaoMaster;
 import com.example.simple.db.dao.DaoSession;
+import com.pgyersdk.Pgyer;
+import com.pgyersdk.crash.PgyCrashManager;
+import com.pgyersdk.update.PgyUpdateManager;
 
 import org.greenrobot.greendao.database.Database;
 
@@ -21,6 +24,9 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+       // PgyCrashManager.register();
+        Pgyer.setAppId("d03390c7201e0692e17fcc6d955e6a68");
+
         app = this;
         initDB();
     }

@@ -1,4 +1,4 @@
-include ':app', ':Java_lib'
+include ':app', ':Java_lib', ':ormsqlitedemo', ':apppgyer'
 include ':library:Common'
 include ':library:WheelPicker'
 

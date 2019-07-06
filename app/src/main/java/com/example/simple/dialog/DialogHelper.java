@@ -106,7 +106,7 @@ public class DialogHelper extends BaseDialogFragment {
     public void onClick(View v) {
         Log.e(TAG, "----");
         if (mOnViewClick != null) {
-            mOnViewClick.click(v);
+            mOnViewClick.click(v,this);
         }
 
     }
@@ -188,8 +188,9 @@ public class DialogHelper extends BaseDialogFragment {
             return this;
         }
 
-        public void setOnViewClick(OnViewClick onViewClick) {
+        public Builder setOnViewClick(OnViewClick onViewClick) {
             this.onViewClick = onViewClick;
+            return this;
         }
 
         public DialogHelper create() {
@@ -228,8 +229,8 @@ public class DialogHelper extends BaseDialogFragment {
         void onDismiss(DialogInterface dialog);
     }
 
-    interface OnViewClick {
-        void click(View v);
+    public interface OnViewClick {
+        void click(View v,DialogFragment dialog);
     }
 
 }

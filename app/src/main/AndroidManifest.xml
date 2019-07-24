@@ -29,8 +29,6 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
-
-
     <application
         android:name=".MyApp"
         android:allowBackup="true"
@@ -39,7 +37,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".model.pgy.PypCheckUpdateActivity"></activity>
+        <activity android:name=".model.pgy.PypCheckUpdateActivity" />
         <!-- 蒲公英 apiKey -->
         <!--
  <meta-data
@@ -109,12 +107,8 @@
         <activity android:name=".model.tablayout.TabLayoutTest1Activity" />
         <activity android:name=".ui.ServiceTestActivity" />
         <activity android:name=".model.fileselect.SelectFileActivity" />
-
-        <activity android:name=".ui.PickerTimeTestActivity"></activity>
-
+        <activity android:name=".ui.PickerTimeTestActivity" />
         <activity android:name=".model.createimg.CreateImgActivity" />
-
-
 
         <!-- 解决android N不能安装apk -->
         <provider
@@ -127,6 +121,7 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
+        <activity android:name=".model.dialogAnimation.Dialog3DActivity"></activity>
     </application>
 
 </manifest>

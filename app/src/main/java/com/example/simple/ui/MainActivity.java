@@ -18,6 +18,7 @@ import com.example.simple.R;
 import com.example.simple.model.cehua.CehuaListviewActivity;
 import com.example.simple.model.createimg.CreateImgActivity;
 import com.example.simple.model.datepick.DatePickerTestActivity;
+import com.example.simple.model.dialogAnimation.Dialog3DActivity;
 import com.example.simple.model.fileselect.SelectFileActivity;
 import com.example.simple.model.pgy.PypCheckUpdateActivity;
 import com.example.simple.model.photo.PhoneImgMainActivity;
@@ -114,6 +115,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("CehuaListviewActivity", CehuaListviewActivity.class));
         mDatas.add(new MyBean("PypCheckUpdateActivity", PypCheckUpdateActivity.class));
         mDatas.add(new MyBean("CreateImgActivity", CreateImgActivity.class));
+        mDatas.add(new MyBean("Dialog3DActivity", Dialog3DActivity.class));
 
 
     }

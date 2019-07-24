@@ -121,4 +121,11 @@
 
         <item name="android:textSize">12sp</item>
     </style>
+
+
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+
 </resources>

@@ -108,13 +108,13 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("TabLayoutTest1Activity", TabLayoutTest1Activity.class));
         mDatas.add(new MyBean("ServiceTestActivity", ServiceTestActivity.class));
         mDatas.add(new MyBean("SelectFileActivity", SelectFileActivity.class));
-<<<<<<< HEAD
+
         mDatas.add(new MyBean("PickerTimeTestActivity", PickerTimeTestActivity.class));
-=======
+
         mDatas.add(new MyBean("CehuaListviewActivity", CehuaListviewActivity.class));
         mDatas.add(new MyBean("PypCheckUpdateActivity", PypCheckUpdateActivity.class));
         mDatas.add(new MyBean("CreateImgActivity", CreateImgActivity.class));
->>>>>>> 09ecb3581bdf6cd8e3ca537ba7caa4f644a48e25
+
 
     }
 

@@ -109,9 +109,9 @@
         <activity android:name=".model.tablayout.TabLayoutTest1Activity" />
         <activity android:name=".ui.ServiceTestActivity" />
         <activity android:name=".model.fileselect.SelectFileActivity" />
-<<<<<<< HEAD
+
         <activity android:name=".ui.PickerTimeTestActivity"></activity>
-=======
+
         <activity android:name=".model.createimg.CreateImgActivity" />
 
 
@@ -127,7 +127,6 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
->>>>>>> 09ecb3581bdf6cd8e3ca537ba7caa4f644a48e25
     </application>
 
 </manifest>

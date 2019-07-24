@@ -65,5 +65,5 @@ dependencies {
 
     implementation 'com.contrarywind:Android-PickerView:4.1.7'
 
-
+    implementation 'com.google.zxing:core:3.3.0'
 }

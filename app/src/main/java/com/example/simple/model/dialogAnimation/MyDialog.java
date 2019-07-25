@@ -52,8 +52,8 @@ public class MyDialog extends Dialog {
 
     private int centerX;
     private int centerY;
-    private int depthZ = 700;
-    private int duration = 3000;
+    private int depthZ = 0;
+    private int duration = 500;
     private Rotate3dAnimation openAnimation;
     private Rotate3dAnimation closeAnimation;
 
@@ -110,10 +110,15 @@ public class MyDialog extends Dialog {
         Window dialogWindow = getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
         DisplayMetrics d = context.getResources().getDisplayMetrics(); // 获取屏幕宽、高用
-        lp.width = (int) (d.widthPixels * 0.8); // 高度设置为屏幕的0.6
-        lp.height = (int) (d.heightPixels * 0.6); // 高度设置为屏幕的0.6
+        lp.width = (int) (d.widthPixels * 0.5); // 高度设置为屏幕的0.6
+        lp.height = (int) (d.heightPixels * 0.2); // 高度设置为屏幕的0.6
+
+        //depthZ = lp.width;
+
+
+
         dialogWindow.setAttributes(lp);
-        setCanceledOnTouchOutside(false);
+        setCanceledOnTouchOutside(true);
         setCancelable(true);
 
 
@@ -128,12 +133,30 @@ public class MyDialog extends Dialog {
 
     public void showDialog(){
         show();
-        //container.startAnimation(closeAnimation);
 
 
-        Window window = getWindow();
+   //     centerY = container.getHeight();
+        Window dialogWindow = getWindow();
+        WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+        DisplayMetrics d = context.getResources().getDisplayMetrics(); // 获取屏幕宽、高用
+        centerX =  (int) (d.widthPixels * 0.5)/2;
+        depthZ = 1000;
+        //从270到360度，顺时针旋转视图，此时reverse参数为false，达到360度动画结束时视图变得可见
+        Rotate3dAnimation rotateAnimation = new Rotate3dAnimation(-180, 0, centerX, centerY, depthZ, false);
+        rotateAnimation.setDuration(duration);
+        rotateAnimation.setFillAfter(true);
+        rotateAnimation.setInterpolator(new DecelerateInterpolator());
+        container.startAnimation(rotateAnimation);
+
+
+
+
+       // container.startAnimation(closeAnimation);
+
+
+       /* Window window = getWindow();
         assert window != null;
-        window.setWindowAnimations(R.style.dialogWindowAnim);
+        window.setWindowAnimations(R.style.dialogWindowAnim);*/
     }
 
     public void setClicklistener(OnClickListenerInterface clickListenerInterface) {
@@ -198,7 +221,7 @@ public class MyDialog extends Dialog {
      */
     private void initOpenAnim() {
         //从0到90度，顺时针旋转视图，此时reverse参数为true，达到90度时动画结束时视图变得不可见，
-        openAnimation = new Rotate3dAnimation(0, 90, centerX, centerY, depthZ, true);
+        openAnimation = new Rotate3dAnimation(270, 360, centerX, centerY, depthZ, false);
         openAnimation.setDuration(duration);
         openAnimation.setFillAfter(true);
         openAnimation.setInterpolator(new AccelerateInterpolator());
@@ -231,7 +254,7 @@ public class MyDialog extends Dialog {
      * 卡牌文本介绍关闭效果：旋转角度与打开时逆行即可
      */
     private void initCloseAnim() {
-        closeAnimation = new Rotate3dAnimation(360, 270, centerX, centerY, depthZ, true);
+        closeAnimation = new Rotate3dAnimation(360, 270, centerX, centerY, depthZ, false);
         closeAnimation.setDuration(duration);
         closeAnimation.setFillAfter(true);
         closeAnimation.setInterpolator(new AccelerateInterpolator());

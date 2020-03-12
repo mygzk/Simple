@@ -1,7 +1,10 @@
 package com.example.simple.utils;
 
+import android.app.Activity;
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.WindowManager;
 
 public class DensityUtil {
 
@@ -58,5 +61,34 @@ public class DensityUtil {
                 View.MeasureSpec.UNSPECIFIED);
         view.measure(w, h);
         return view.getMeasuredHeight();
+    }
+
+    public static int getScreenWidth(Context context){
+//        DisplayMetrics outMetrics = new DisplayMetrics();
+//        context.getWindowManager().getDefaultDisplay().getMetrics(outMetrics);
+//        int widthPixels = outMetrics.widthPixels;
+//        int heightPixels = outMetrics.heightPixels;
+
+        WindowManager wm = (WindowManager) context
+                .getSystemService(Context.WINDOW_SERVICE);
+
+        int width = wm.getDefaultDisplay().getWidth();
+        int height = wm.getDefaultDisplay().getHeight();
+        return width;
+    }
+
+    public static int getScreenHeight(Context context){
+//        DisplayMetrics outMetrics = new DisplayMetrics();
+//        context.getWindowManager().getDefaultDisplay().getMetrics(outMetrics);
+//        int widthPixels = outMetrics.widthPixels;
+//        int heightPixels = outMetrics.heightPixels;
+
+
+        WindowManager wm = (WindowManager) context
+                .getSystemService(Context.WINDOW_SERVICE);
+
+        int width = wm.getDefaultDisplay().getWidth();
+        int height = wm.getDefaultDisplay().getHeight();
+        return height;
     }
 }

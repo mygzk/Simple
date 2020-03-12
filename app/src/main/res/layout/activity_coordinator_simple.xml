@@ -11,13 +11,13 @@
         android:id="@+id/main.appbar"
         theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:layout_width="match_parent"
-        android:layout_height="171dp"
+        android:layout_height="500dp"
         android:fitsSystemWindows="true">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/main_collapsing"
             android:layout_width="match_parent"
-            android:layout_height="171dp"
+            android:layout_height="500dp"
             android:fitsSystemWindows="true"
             app:collapsedTitleTextAppearance="@style/ss1"
             app:contentScrim="#0c6ccc"

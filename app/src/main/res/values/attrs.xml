@@ -43,5 +43,10 @@
         <attr name="swipe_menu_right_id"    format="reference"/>
         <attr name="swipe_context_id"       format="reference"/>
     </declare-styleable>
+
+
+    <declare-styleable name="PullLoadMoreView">
+        <attr name="top_background_color" format="color" />
+    </declare-styleable>
 </resources>
 

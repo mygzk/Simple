@@ -25,6 +25,7 @@ allprojects {
         maven { url "https://maven.google.com"}
         maven { url "https://dl.google.com/dl/android/maven2/"}
       //  maven { url "https://raw.githubusercontent.com/Pgyer/mvn_repo_pgyer/master" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
 }
 

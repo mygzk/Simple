@@ -22,6 +22,9 @@ import com.example.simple.model.dialogAnimation.Dialog3DActivity;
 import com.example.simple.model.fileselect.SelectFileActivity;
 import com.example.simple.model.pgy.PypCheckUpdateActivity;
 import com.example.simple.model.photo.PhoneImgMainActivity;
+import com.example.simple.model.pullloadmore.PullMoreActivity;
+import com.example.simple.model.stikkyheader.ListHeaderActivity;
+import com.example.simple.model.stikkyheader.StikkyheaderActivity;
 import com.example.simple.model.tablayout.TabLayoutTest1Activity;
 import com.example.simple.model.tablayout.TabLayoutTestActivity;
 import com.example.simple.ui.Coordinator.CoordinatorSimpleActivity;
@@ -116,6 +119,9 @@ public class MainActivity extends BaseActivity {
         mDatas.add(new MyBean("PypCheckUpdateActivity", PypCheckUpdateActivity.class));
         mDatas.add(new MyBean("CreateImgActivity", CreateImgActivity.class));
         mDatas.add(new MyBean("Dialog3DActivity", Dialog3DActivity.class));
+        mDatas.add(new MyBean("PullMoreActivity", PullMoreActivity.class));
+        mDatas.add(new MyBean("StikkyheaderActivity", StikkyheaderActivity.class));
+        mDatas.add(new MyBean("ListHeaderActivity", ListHeaderActivity.class));
 
 
     }

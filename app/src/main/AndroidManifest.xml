@@ -29,8 +29,6 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
-
-
     <application
         android:name=".MyApp"
         android:allowBackup="true"
@@ -39,6 +37,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".model.stikkyheader.ListHeaderActivity"></activity>
+        <activity android:name=".model.stikkyheader.StikkyheaderActivity" />
+        <activity android:name=".model.pullloadmore.PullMoreActivity" />
         <activity android:name=".model.pgy.PypCheckUpdateActivity" /> <!-- 蒲公英 apiKey -->
         <!--
  <meta-data
@@ -109,9 +110,7 @@
         <activity android:name=".ui.ServiceTestActivity" />
         <activity android:name=".model.fileselect.SelectFileActivity" />
         <activity android:name=".ui.PickerTimeTestActivity" />
-        <activity android:name=".model.createimg.CreateImgActivity" />
-
-        <!-- 解决android N不能安装apk -->
+        <activity android:name=".model.createimg.CreateImgActivity" /> <!-- 解决android N不能安装apk -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.simple.fileprovider"
@@ -122,7 +121,7 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-        <activity android:name=".model.dialogAnimation.Dialog3DActivity"/>
+        <activity android:name=".model.dialogAnimation.Dialog3DActivity" />
     </application>
 
 </manifest>
